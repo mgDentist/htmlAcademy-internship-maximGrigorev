@@ -13,14 +13,13 @@ $color-endeavour: #275699;
 $color-wild-watermelon: #ff121f;
 $color-alabaster: #f0efe9;
 $color-mischka: #a9afb7;
-$color-black-pearl: #0d1d3340;
+$color-black-pearl: rgba(13, 29, 51, 0.4);
 
 // Typography
 // ---------------------------------
 
 // переменная используемая в html для подключения скейлинга
 $fz-default: 16px;
-
 $ff-placeholder: "Manrope", "Arial", sans-serif;
 
 // Animation
@@ -31,7 +30,6 @@ $trans-default: 0.3s $tf-default;
 
 // если требуется изинг отличный от $tf-default, то переменную называем не цифрой
 $trans-modal: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
-
 $trans-600: 0.6s $tf-default;
 
 // Viewports

@@ -1,5 +1,13 @@
 // Vendor
 // ---------------------------------
-
 @import "vendor/normalize";
-@import "global/fonts.scss";
+
+// Global
+@import "variables";
+@import "mixins";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
+
+// Blocks
