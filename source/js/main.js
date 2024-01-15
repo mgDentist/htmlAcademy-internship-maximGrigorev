@@ -3,3 +3,6 @@
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
 
+import { navOpener } from "./modules/burger";
+
+navOpener();

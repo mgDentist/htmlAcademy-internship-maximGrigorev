@@ -19,78 +19,79 @@
 
 <body>
   <div class="wrapper">
-    <main>
-      <div data-test="slider">
-        <section class="header">
-          <div class="container">
-            <img src="img/logo.svg" alt="Логотип компании Internship">
-            <button class="header__button btn" type="button">
-              <span>Меню</span>
-              <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="46" height="46" rx="23" fill="#316DC2" />
-                <path d="M14 19H32M14 23H32M14 27H32" stroke="white" stroke-linecap="round" />
-              </svg>
-              <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="46" height="46" rx="23" fill="white" />
-                <path d="M15 31L23 23M23 23L31 15M23 23L31 31M23 23L15 15" stroke="#316DC2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
-            <nav>
-              <ul class="header__nav-list">
-                <li class="header__nav-list-item">
-                  <a href="#">О проекте</a>
+    <section class="header">
+      <div class="container header__container">
+        <img src="img/logo.svg" width="52" height="52" alt="Логотип компании Internship">
+        <button class="btn header__button" type="button" data-button="burger-btn">
+          <span>Меню</span>
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="46" height="46" rx="23" fill="#316DC2" />
+            <path d="M14 19H32M14 23H32M14 27H32" stroke="white" stroke-linecap="round" />
+          </svg>
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="46" height="46" rx="23" fill="white" />
+            <path d="M15 31L23 23M23 23L31 15M23 23L31 31M23 23L15 15" stroke="#316DC2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+        <nav class="header__nav" data-element="header-nav">
+          <ul class="header__nav-list nav-list">
+            <li class="nav-list__item">
+              <a href="#">О проекте</a>
+            </li>
+            <li class="nav-list__item nav-list__item--sublisted">
+              <a href="#">Программы</a>
+              <ul class="nav-list__sublist">
+                <li class="nav-list__sublist-item">
+                  <a href="#">Стажировки</a>
                 </li>
-                <li class="header__nav-list-item">
-                  <a href="#">Программы</a>
-                  <ul class="header__nav-sublist">
-                    <li class="header__nav-sublist-item">
-                      <a href="#">Стажировки</a>
-                    </li>
-                    <li class="header__nav-sublist-item">
-                      <a href="#">Волотнерство</a>
-                    </li>
-                    <li class="header__nav-sublist-item">
-                      <a href="#">Учеба</a>
-                    </li>
-                    <li class="header__nav-sublist-item">
-                      <a href="#">Религия</a>
-                    </li>
-                  </ul>
+                <li class="nav-list__sublist-item">
+                  <a href="#">Волотнерство</a>
                 </li>
-                <li class="header__nav-list-item">
-                  <a href="#">Как поехать</a>
+                <li class="nav-list__sublist-item">
+                  <a href="#">Учеба</a>
                 </li>
-                <li class="header__nav-list-item">
-                  <a href="#">Отзывы</a>
-                </li>
-                <li class="header__nav-list-item">
-                  <a href="#">Новости</a>
-                  <ul class="header__nav-sublist">
-                    <li class="header__nav-sublist-item">
-                      <a href="#">Общее</a>
-                    </li>
-                    <li class="header__nav-sublist-item">
-                      <a href="#">Волотнерство</a>
-                    </li>
-                    <li class="header__nav-sublist-item">
-                      <a href="#">Стажировки</a>
-                    </li>
-                    <li class="header__nav-sublist-item">
-                      <a href="#">Карьера</a>
-                    </li>
-                    <li class="header__nav-sublist-item">
-                      <a href="#">Путешествия</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="header__nav-list-item">
-                  <a href="#">Контакты</a>
+                <li class="nav-list__sublist-item">
+                  <a href="#">Религия</a>
                 </li>
               </ul>
-            </nav>
-          </div>
-        </section>
+            </li>
+            <li class="nav-list__item">
+              <a href="#">Как поехать</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#">Отзывы</a>
+            </li>
+            <li class="nav-list__item nav-list__item--sublisted">
+              <a href="#">Новости</a>
+              <ul class="nav-list__sublist">
+                <li class="nav-list__sublist-item">
+                  <a href="#">Общее</a>
+                </li>
+                <li class="nav-list__sublist-item">
+                  <a href="#">Волотнерство</a>
+                </li>
+                <li class="nav-list__sublist-item">
+                  <a href="#">Стажировки</a>
+                </li>
+                <li class="nav-list__sublist-item">
+                  <a href="#">Карьера</a>
+                </li>
+                <li class="nav-list__sublist-item">
+                  <a href="#">Путешествия</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-list__item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <main>
+      <div data-test="slider">
+
         <section class="hero">
 
         </section>
@@ -108,6 +109,9 @@
   <div data-test="contacts">contacts</div>
   <div data-test="form">form</div>
   <div data-test="footer">footer</div>
+
+  <div class="overlay" data-burger="overlay"></div>
+
   <script type="module" src="js/main.js"></script>
 </body>
 

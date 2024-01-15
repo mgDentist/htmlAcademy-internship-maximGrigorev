@@ -1,0 +1,21 @@
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.nav-list__item a {
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  color: rgb($color-default-white, 0.7);
+}
+
+.nav-list__sublist {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+  padding-left: 16px;
+}
