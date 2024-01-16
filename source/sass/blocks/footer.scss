@@ -1,0 +1,159 @@
+.footer {
+  padding-bottom: 60px;
+}
+
+.footer__container {
+  display: grid;
+  row-gap: 25px;
+  align-items: center;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "logonav socials"
+    "text text";
+
+  @include vp-1439 {
+    grid-template-areas:
+      "logonav logonav"
+      "text socials";
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.footer__logo-nav-wrapper {
+  grid-area: logonav;
+
+  display: flex;
+  gap: 56px;
+  align-items: center;
+
+  @include vp-1439 {
+    justify-content: space-between;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.footer__text-wrapper {
+  grid-area: text;
+
+  display: flex;
+  justify-content: space-between;
+
+  @include vp-1439 {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  @include vp-767 {
+    align-items: center;
+  }
+}
+
+.footer__container>img {
+  grid-area: logo;
+}
+
+.footer__nav {
+  grid-area: nav;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 20px;
+
+  grid-area: socials;
+  justify-self: end;
+
+  @include vp-767 {
+    order: 2;
+  }
+}
+
+.footer__socials svg {
+  color: $color-default-white;
+}
+
+.footer__socials a {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-cerulean-blue;
+  border-radius: 50%;
+  opacity: 1;
+
+  &:active {
+    background-color: $color-endeavour;
+    transition: background-color $trans-modal;
+  }
+}
+
+.footer__socials a:hover svg {
+  opacity: 0.7;
+  transition: opacity $trans-modal;
+}
+
+.footer__socials a:focus svg {
+  opacity: 0.7;
+  transition: opacity $trans-modal;
+}
+
+.footer__socials a:active svg {
+  opacity: 1;
+  transition: opacity $trans-modal;
+}
+
+.footer__copyright {
+  // grid-area: copyright;
+}
+
+.footer__copyright span {
+  line-height: 18px;
+  opacity: 0.6;
+
+  @include vp-1439 {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+
+.footer__policies {
+  // grid-area: policies;
+
+  // justify-self: end;
+}
+
+.footer__policies a {
+  padding-bottom: 2px;
+  padding-top: 5px;
+  line-height: 18px;
+  border-bottom: 1px solid;
+  border-color: $color-default-black;
+
+  @include vp-1439 {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-cerulean-blue;
+    border-color: $color-cerulean-blue;
+    transition: color $trans-modal, border-color $trans-modal;
+  }
+
+  &:active {
+    color: $color-endeavour;
+    border-color: $color-endeavour;
+    transition: color $trans-modal, border-color $trans-modal;
+  }
+}
