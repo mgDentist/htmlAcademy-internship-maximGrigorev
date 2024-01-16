@@ -35,13 +35,18 @@
           </svg>
         </button>
         <nav class="header__nav" data-element="header-nav">
-          <ul class="header__nav-list nav-list">
+          <ul class="header__nav-list nav-list" data-accordion="parent">
             <li class="nav-list__item">
               <a href="#">О проекте</a>
             </li>
-            <li class="nav-list__item nav-list__item--sublisted">
-              <a href="#">Программы</a>
-              <ul class="nav-list__sublist">
+            <li class="nav-list__item nav-list__item--sublisted" data-accordion="element">
+              <a href="#" data-accordion="button">Программы
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.6" d="M11.455 3.81812L6.00044 8.72721L0.545898 3.81812" stroke="white" />
+                </svg>
+              </a>
+
+              <ul class="nav-list__sublist" data-accordion="content">
                 <li class="nav-list__sublist-item">
                   <a href="#">Стажировки</a>
                 </li>
@@ -55,6 +60,7 @@
                   <a href="#">Религия</a>
                 </li>
               </ul>
+
             </li>
             <li class="nav-list__item">
               <a href="#">Как поехать</a>
@@ -62,9 +68,14 @@
             <li class="nav-list__item">
               <a href="#">Отзывы</a>
             </li>
-            <li class="nav-list__item nav-list__item--sublisted">
-              <a href="#">Новости</a>
-              <ul class="nav-list__sublist">
+            <li class="nav-list__item nav-list__item--sublisted" data-accordion="element">
+              <a href="#" data-accordion="button">Новости
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.6" d="M11.455 3.81812L6.00044 8.72721L0.545898 3.81812" stroke="white" />
+                </svg>
+              </a>
+
+              <ul class="nav-list__sublist" data-accordion="content">
                 <li class="nav-list__sublist-item">
                   <a href="#">Общее</a>
                 </li>
