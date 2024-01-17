@@ -28,8 +28,13 @@
   margin-top: 20px;
 }
 
+.nav-list__item--sublisted svg {
+  transition: transform $trans-modal;
+}
+
 .nav-list__item--sublisted.is-active svg {
   transform: rotate(180deg);
+  transition: transform $trans-modal;
 }
 
 .nav-list__item--sublisted.is-active>a {
