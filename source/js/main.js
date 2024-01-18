@@ -3,8 +3,10 @@
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
 
-import { navOpener } from "./modules/burger";
-import { initAccordions } from "./vendor/accordion/init-accordion";
+import { scrollPage } from './modules/scroll-header';
+import { navOpener } from './modules/burger';
+import { initAccordions } from './vendor/accordion/init-accordion';
+
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -15,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+  scrollPage();
   navOpener();
 
 

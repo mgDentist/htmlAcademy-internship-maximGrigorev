@@ -1,5 +1,11 @@
 .header {
-  // position: fixed;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: transform $trans-modal;
+  transform: translateY(0);
   padding-top: 30px;
 }
 
@@ -48,9 +54,9 @@
 }
 
 .header__nav {
+  z-index: 50;
   opacity: 0;
   visibility: hidden;
-  z-index: 50;
   position: absolute;
   top: 65px;
   right: 100px;
@@ -58,7 +64,9 @@
   padding: 35px 25px;
   background-color: $color-cerulean-blue;
   border-radius: 16px;
-  transition: opacity $trans-default, visibility $trans-default;
+  transition:
+    opacity $trans-default,
+    visibility $trans-default;
 
   @include vp-1439 {
     right: 45px;
