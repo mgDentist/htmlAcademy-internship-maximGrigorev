@@ -22,6 +22,7 @@
 <body>
   <div class="wrapper">
     <header class="header">
+      <h1 class="visually-hidden">Добро пожаловать на сайт компании</h1>
       <div class="container header__container">
         <img src="img/logo.svg" width="52" height="52" alt="Логотип компании Internship">
         <button class="btn header__button" type="button" data-button="burger-btn">
@@ -104,9 +105,61 @@
     </header>
     <main>
       <div data-test="slider">
-
         <section class="hero">
-
+          <h2 class="visually-hidden">Приветственный раздел сайта компании</h2>
+          <ul class="hero__list">
+            <li class="hero__item">
+              <div class="hero__background-item-image-container">
+                <!-- <img src="img/hero/lady-yellow-desktop.jpg" alt=""> -->
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/hero/lady-yellow-desktop.webp 1x, img/hero/lady-yellow-desktop@2x.webp 2x" width="1440"
+                    height="800">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/hero/lady-yellow-tablet.webp 1x, img/hero/lady-yellow-tablet@2x.webp 2x" width="1440"
+                    height="1024">
+                  <source type="image/webp"
+                    srcset="img/hero/lady-yellow-mobile.webp 1x, img/hero/lady-yellow-mobile@2x.webp 2x" width="768"
+                    height="568">
+                  <source type="image/jpeg" media="(min-width: 1440px)"
+                    srcset="img/hero/lady-yellow-desktop.jpg 1x, img/hero/lady-yellow-desktop@2x.jpg 2x" width="1440"
+                    height="800">
+                  <source type="image/jpeg" media="(min-width: 768px)"
+                    srcset="img/hero/lady-yellow-tablet.jpg 1x, img/hero/lady-yellow-tablet@2x.jpg 2x" width="1440"
+                    height="1024">
+                  <img class="gym__img" src="img/hero/lady-yellow-mobile.jpg"
+                    srcset="img/hero/lady-yellow-mobile@2x.jpg 2x" width="768" height="568"
+                    alt="Cпортзал и спортивный инвентарь." />
+                </picture>
+              </div>
+              <div class="hero__text-wrapper">
+                <div class="hero__title-wrapper">
+                  <h3>Глобальный профессиональный опыт обучения за рубежом</h3>
+                </div>
+                <div class="hero__text-inner-wrapper">
+                  <div class="hero__description-container">
+                    <p>Погрузитесь в академическую программу, проходя практику в разных городах,
+                      ощущая настоящий студенческий стиль жизни!</p>
+                  </div>
+                  <div class="hero__button-container">
+                    <a class="hero__link btn" href="#">Подробнее
+                      <div class="hero__link-svg-wrapper">
+                        <svg width="10" height="10">
+                          <use href="__spritemap#sprite-arrow-up"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="hero__pagination-decorative-container"></div>
+              </div>
+            </li>
+          </ul>
+          <div class="hero__pagination">
+            <span class="hero__bullet"></span>
+            <span class="hero__bullet"></span>
+            <span class="hero__bullet"></span>
+          </div>
         </section>
       </div>
     </main>
