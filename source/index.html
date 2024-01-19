@@ -107,62 +107,155 @@
       <div data-test="slider">
         <section class="hero">
           <h2 class="visually-hidden">Приветственный раздел сайта компании</h2>
-          <ul class="hero__list">
-            <li class="hero__item">
-              <div class="hero__background-item-image-container">
-                <!-- <img src="img/hero/lady-yellow-desktop.jpg" alt=""> -->
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)"
-                    srcset="img/hero/lady-yellow-desktop.webp 1x, img/hero/lady-yellow-desktop@2x.webp 2x" width="1440"
-                    height="800">
-                  <source type="image/webp" media="(min-width: 768px)"
-                    srcset="img/hero/lady-yellow-tablet.webp 1x, img/hero/lady-yellow-tablet@2x.webp 2x" width="1440"
-                    height="1024">
-                  <source type="image/webp"
-                    srcset="img/hero/lady-yellow-mobile.webp 1x, img/hero/lady-yellow-mobile@2x.webp 2x" width="768"
-                    height="568">
-                  <source type="image/jpeg" media="(min-width: 1440px)"
-                    srcset="img/hero/lady-yellow-desktop.jpg 1x, img/hero/lady-yellow-desktop@2x.jpg 2x" width="1440"
-                    height="800">
-                  <source type="image/jpeg" media="(min-width: 768px)"
-                    srcset="img/hero/lady-yellow-tablet.jpg 1x, img/hero/lady-yellow-tablet@2x.jpg 2x" width="1440"
-                    height="1024">
-                  <img class="gym__img" src="img/hero/lady-yellow-mobile.jpg"
-                    srcset="img/hero/lady-yellow-mobile@2x.jpg 2x" width="768" height="568"
-                    alt="Cпортзал и спортивный инвентарь." />
-                </picture>
-              </div>
-              <div class="hero__text-wrapper">
-                <div class="hero__title-wrapper">
-                  <h3>Глобальный профессиональный опыт обучения за рубежом</h3>
+          <div class="swiper hero__swiper-wrapper" data-slider="hero-slider">
+            <ul class="swiper-wrapper hero__list">
+              <li class="swiper-slide hero__item">
+                <div class="hero__background-item-image-container">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="img/hero/lady-yellow-desktop.webp 1x, img/hero/lady-yellow-desktop@2x.webp 2x"
+                      width="1440" height="800">
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/hero/lady-yellow-tablet.webp 1x, img/hero/lady-yellow-tablet@2x.webp 2x" width="1440"
+                      height="1024">
+                    <source type="image/webp"
+                      srcset="img/hero/lady-yellow-mobile.webp 1x, img/hero/lady-yellow-mobile@2x.webp 2x" width="768"
+                      height="568">
+                    <source type="image/jpeg" media="(min-width: 1440px)"
+                      srcset="img/hero/lady-yellow-desktop.jpg 1x, img/hero/lady-yellow-desktop@2x.jpg 2x" width="1440"
+                      height="800">
+                    <source type="image/jpeg" media="(min-width: 768px)"
+                      srcset="img/hero/lady-yellow-tablet.jpg 1x, img/hero/lady-yellow-tablet@2x.jpg 2x" width="1440"
+                      height="1024">
+                    <img class="gym__img" src="img/hero/lady-yellow-mobile.jpg"
+                      srcset="img/hero/lady-yellow-mobile@2x.jpg 2x" width="768" height="568"
+                      alt="Cпортзал и спортивный инвентарь." />
+                  </picture>
                 </div>
-                <div class="hero__text-inner-wrapper">
-                  <div class="hero__description-container">
-                    <p>Погрузитесь в академическую программу, проходя практику в разных городах,
-                      ощущая настоящий студенческий стиль жизни!</p>
+                <div class="hero__text-wrapper">
+                  <div class="hero__title-wrapper">
+                    <h3>Глобальный профессиональный опыт обучения за рубежом</h3>
                   </div>
-                  <div class="hero__button-container">
-                    <a class="hero__link btn" href="#">Подробнее
-                      <div class="hero__link-svg-wrapper">
-                        <svg width="10" height="10">
-                          <use href="__spritemap#sprite-arrow-up"></use>
-                        </svg>
-                      </div>
-                    </a>
+                  <div class="hero__text-inner-wrapper">
+                    <div class="hero__description-container">
+                      <p>Погрузитесь в академическую программу, проходя практику в разных городах,
+                        ощущая настоящий студенческий стиль жизни!</p>
+                    </div>
+                    <div class="hero__button-container">
+                      <a class="hero__link btn" href="#">Подробнее
+                        <div class="hero__link-svg-wrapper">
+                          <svg width="10" height="10">
+                            <use href="__spritemap#sprite-arrow-up"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
                   </div>
+                  <div class="hero__pagination-decorative-container"></div>
                 </div>
-                <div class="hero__pagination-decorative-container"></div>
-              </div>
-            </li>
-          </ul>
-          <div class="hero__pagination">
-            <span class="hero__bullet"></span>
-            <span class="hero__bullet"></span>
-            <span class="hero__bullet"></span>
+              </li>
+              <li class="swiper-slide hero__item">
+                <div class="hero__background-item-image-container">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="img/hero/people-desktop.webp 1x, img/hero/people-desktop@2x.webp 2x" width="1440"
+                      height="800">
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/hero/people-tablet.webp 1x, img/hero/people-tablet@2x.webp 2x" width="1440"
+                      height="1024">
+                    <source type="image/webp" srcset="img/hero/people-mobile.webp 1x, img/hero/people-mobile@2x.webp 2x"
+                      width="768" height="568">
+                    <source type="image/jpeg" media="(min-width: 1440px)"
+                      srcset="img/hero/people-desktop.jpg 1x, img/hero/people-desktop@2x.jpg 2x" width="1440"
+                      height="800">
+                    <source type="image/jpeg" media="(min-width: 768px)"
+                      srcset="img/hero/people-tablet.jpg 1x, img/hero/people-tablet@2x.jpg 2x" width="1440"
+                      height="1024">
+                    <img class="gym__img" src="img/hero/people-mobile.jpg" srcset="img/hero/people-mobile@2x.jpg 2x"
+                      width="768" height="568" alt="Cпортзал и спортивный инвентарь." />
+                  </picture>
+                </div>
+                <div class="hero__text-wrapper">
+                  <div class="hero__title-wrapper">
+                    <h3>Волонтёрские программы –
+                      внесите свой вклад в общество</h3>
+                  </div>
+                  <div class="hero__text-inner-wrapper">
+                    <div class="hero__description-container">
+                      <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни
+                        и другое.</p>
+                    </div>
+                    <div class="hero__button-container">
+                      <a class="hero__link btn" href="#">Подробнее
+                        <div class="hero__link-svg-wrapper">
+                          <svg width="10" height="10">
+                            <use href="__spritemap#sprite-arrow-up"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="hero__pagination-decorative-container"></div>
+                </div>
+              </li>
+              <li class="swiper-slide hero__item">
+                <div class="hero__background-item-image-container">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="img/hero/company-desktop.webp 1x, img/hero/company-desktop@2x.webp 2x" width="1440"
+                      height="800">
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/hero/company-tablet.webp 1x, img/hero/company-tablet@2x.webp 2x" width="1440"
+                      height="1024">
+                    <source type="image/webp"
+                      srcset="img/hero/company-mobile.webp 1x, img/hero/company-mobile@2x.webp 2x" width="768"
+                      height="568">
+                    <source type="image/jpeg" media="(min-width: 1440px)"
+                      srcset="img/hero/company-desktop.jpg 1x, img/hero/company-desktop@2x.jpg 2x" width="1440"
+                      height="800">
+                    <source type="image/jpeg" media="(min-width: 768px)"
+                      srcset="img/hero/company-tablet.jpg 1x, img/hero/company-tablet@2x.jpg 2x" width="1440"
+                      height="1024">
+                    <img class="gym__img" src="img/hero/company-mobile.jpg" srcset="img/hero/company-mobile@2x.jpg 2x"
+                      width="768" height="568" alt="Cпортзал и спортивный инвентарь." />
+                  </picture>
+                </div>
+                <div class="hero__text-wrapper">
+                  <div class="hero__title-wrapper">
+                    <h3>Программы стажировок
+                      в крупнейших компаниях мира</h3>
+                  </div>
+                  <div class="hero__text-inner-wrapper">
+                    <div class="hero__description-container">
+                      <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.
+                      </p>
+                    </div>
+                    <div class="hero__button-container">
+                      <a class="hero__link btn" href="#">Подробнее
+                        <div class="hero__link-svg-wrapper">
+                          <svg width="10" height="10">
+                            <use href="__spritemap#sprite-arrow-up"></use>
+                          </svg>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="hero__pagination-decorative-container"></div>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-pagination hero__pagination" data-slider="hero-slider-pgn">
+              <!-- <span class="hero__bullet"></span>
+                          <span class="hero__bullet"></span>
+                          <span class="hero__bullet"></span> -->
+            </div>
           </div>
+
+
         </section>
       </div>
     </main>
+
     <footer class="footer" data-test="footer">
       <div class="container footer__container">
         <div class="footer__logo-nav-wrapper">
