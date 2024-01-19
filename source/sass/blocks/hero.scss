@@ -221,7 +221,7 @@
     border-color: $color-mischka;
     pointer-events: none;
 
-    .hero__link-svg-wrapper {
+    .btn__wrapper {
       background-color: $color-mischka;
     }
 
@@ -243,31 +243,24 @@
   }
 }
 
-.hero__link-svg-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 18px;
-  background-color: $color-cerulean-blue;
-  border-radius: 50%;
-  transition: background-color $trans-modal;
+// .hero__link-svg-wrapper {
 
-  @include vp-767 {
-    padding: 12px;
-  }
-}
+//   @include vp-767 {
+//     padding: 12px;
+//   }
+// }
 
-.hero__link-svg-wrapper svg {
-  color: $color-default-white;
-  transition:
-    color $trans-modal,
-    transform $trans-modal;
+// .btn__wrapper svg {
+//   color: $color-default-white;
+//   transition:
+//     color $trans-modal,
+//     transform $trans-modal;
 
-  @include vp-767 {
-    width: 8px;
-    height: 8px;
-  }
-}
+//   @include vp-767 {
+//     width: 8px;
+//     height: 8px;
+//   }
+// }
 
 .hero__pagination-decorative-container {
   position: absolute;
