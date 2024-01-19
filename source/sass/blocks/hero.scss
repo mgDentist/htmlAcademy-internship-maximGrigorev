@@ -1,7 +1,7 @@
 .hero__item {
   position: relative;
   min-height: 800px;
-  display: flex !important;
+  display: flex;
   justify-content: flex-start;
   align-items: flex-end;
   padding: 100px 100px 60px;
@@ -243,25 +243,6 @@
   }
 }
 
-// .hero__link-svg-wrapper {
-
-//   @include vp-767 {
-//     padding: 12px;
-//   }
-// }
-
-// .btn__wrapper svg {
-//   color: $color-default-white;
-//   transition:
-//     color $trans-modal,
-//     transform $trans-modal;
-
-//   @include vp-767 {
-//     width: 8px;
-//     height: 8px;
-//   }
-// }
-
 .hero__pagination-decorative-container {
   position: absolute;
   top: -27px;
@@ -297,6 +278,10 @@
   }
 }
 
+.swiper-slide.hero__item {
+  display: flex;
+}
+
 .hero__swiper-wrapper {
   position: relative;
 }
@@ -308,7 +293,6 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
-  // top: 410px;
   bottom: 360px;
   left: 100px;
   width: 100px;
