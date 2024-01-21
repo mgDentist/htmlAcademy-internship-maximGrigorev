@@ -7,6 +7,7 @@ import { scrollPage } from './modules/scroll-header';
 import { navOpener } from './modules/burger';
 import { initAccordions } from './vendor/accordion/init-accordion';
 import { initHeroSlider } from './modules/slider-hero';
+import { initProgramsSlider } from './modules/slider-programs';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -21,6 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
   scrollPage();
   navOpener();
   initHeroSlider();
+  initProgramsSlider();
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

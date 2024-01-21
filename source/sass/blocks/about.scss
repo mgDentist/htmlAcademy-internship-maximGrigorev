@@ -130,6 +130,7 @@
 .about__link {
   gap: 30px;
   align-self: flex-start;
+  background-color: $color-transparent;
   transition:
     background-color $trans-modal,
     color $trans-modal;
