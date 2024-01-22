@@ -26,7 +26,7 @@ const initProgramsSlider = () => {
       // },
 
       autoHeight: true,
-      // loop: true,
+      loop: false,
       breakpoints: {
         1440: {
           allowTouchMove: true,
