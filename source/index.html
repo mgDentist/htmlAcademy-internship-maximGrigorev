@@ -592,6 +592,95 @@
           </div>
         </div>
       </section>
+
+      <section class="feedback" data-test="form">
+        <div class="container feedback__container">
+          <div class="feedback__img-container">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)"
+                srcset="img/feedback/city-desktop.webp 1x, img/feedback/city-desktop@2x.webp 2x" width="" height="">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/feedback/city-tablet.webp 1x, img/feedback/city-tablet@2x.webp 2x" width="" height="">
+              <source type="image/webp" srcset="img/feedback/city-mobile.webp 1x, img/feedback/city-mobile@2x.webp 2x"
+                width="" height="">
+              <source type="image/jpeg" media="(min-width: 1440px)"
+                srcset="img/feedback/city-desktop.jpg 1x, img/feedback/city-desktop@2x.jpg 2x" width="" height="">
+              <source type="image/jpeg" media="(min-width: 768px)"
+                srcset="img/feedback/city-tablet.jpg 1x, img/feedback/city-tablet@2x.jpg 2x" width="" height="">
+              <img src="img/feedback/city-mobile.jpg" srcset="img/feedback/city-mobile@2x.jpg 2x" width="" height=""
+                alt="" />
+            </picture>
+          </div>
+          <div class="feedback__text-block-container">
+            <div class="feedback__form-container">
+              <h2>Напишите нам</h2>
+              <p>Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+              <form class="feedback__form" action="#" method="post">
+                <label>
+                  Имя
+                  <input type="text" name="name" id="name">
+                </label>
+                <label>
+                  Телефон
+                  <input type="tel" name="tel" id="tel">
+                </label>
+                <label>
+                  Ваше сообщение
+                  <textarea name="message" id="message"></textarea>
+                </label>
+                <!-- <label>
+                  Выберите город
+                  <select name="city" id="city">
+                    <option value="" disabled selected></option>
+                    <option value="moscow">Москва</option>
+                    <option value="spb">Санкт-Петербург</option>
+                    <option value="novosibirsk">Новосибирск</option>
+                  </select>
+                </label> -->
+                <label>
+                  Выберите город
+                  <div class="custom-select" data-select>
+                    <span class="custom-select__label"></span>
+                    <span class="custom-select__error">some-error</span>
+                    <span class="custom-select__placeholder"></span>
+                    <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                      <span class="custom-select__text"></span>
+                      <span class="custom-select__icon">
+                        <!-- <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path opacity="0.6" d="M11.455 3.81812L6.00044 8.72721L0.545898 3.81812" stroke="white" />
+                        </svg> -->
+                      </span>
+                    </button>
+                    <ul class="custom-select__list">
+                      <li class="custom-select__item active" tabindex="0" data-select-value="id-1"></li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="id-2">Санкт-Петербург</li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="id-3">Санкт-Петербург</li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="id-4">Санкт-Петербург</li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="id-5">Санкт-Петербург</li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="id-6">Санкт-Петербург</li>
+                    </ul>
+                  </div>
+                </label>
+
+
+                <label>
+                  <input type="checkbox" name="agree" id="agree" checked>
+                  Я согласен на обработку моих персональных данных
+                </label>
+                <button class="feedback__form-button btn" type="submit">
+                  Отправить
+                  <div class="feedback__btn-wrapper btn__wrapper btn__wrapper--invert">
+                    <svg width="10" height="10">
+                      <use href="__spritemap#sprite-arrow-up"></use>
+                    </svg>
+                  </div>
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </section>
     </main>
 
     <footer class="footer" data-test="footer">

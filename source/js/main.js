@@ -9,6 +9,7 @@ import { initAccordions } from './vendor/accordion/init-accordion';
 import { initHeroSlider } from './modules/slider-hero';
 import { initProgramsSlider } from './modules/slider-programs';
 
+import { CustomSelect } from './vendor/select/custom-select';
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -34,5 +35,8 @@ window.addEventListener('DOMContentLoaded', () => {
     // form.init();
     // initTabs();
     initAccordions();
+
+    const select = new CustomSelect();
+    select.init();
   });
 });
