@@ -8,6 +8,7 @@ import { navOpener } from './modules/burger';
 import { initAccordions } from './vendor/accordion/init-accordion';
 import { initHeroSlider } from './modules/slider-hero';
 import { initProgramsSlider } from './modules/slider-programs';
+import { initReviewsSlider } from './modules/slider-reviews';
 
 import { CustomSelect } from './vendor/select/custom-select';
 
@@ -24,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
   navOpener();
   initHeroSlider();
   initProgramsSlider();
+  initReviewsSlider();
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
