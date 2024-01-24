@@ -248,6 +248,7 @@
           </div>
         </section>
       </div>
+
       <section class="about" data-test="about">
         <div class="container about__container">
           <div class="about__text-block-wrapper">
@@ -476,7 +477,7 @@
             <div class="swiper-pagination programs__slider-pagination" data-slider="programs-slider-pgn"></div>
 
             <div class="programs__buttons-container">
-              <button class="programs__slider-button swiper-button-prev" disabled type="button"
+              <button class="programs__slider-button swiper-button-prev" type="button"
                 data-slider="programs-slider-btn-prev">
                 <div class="programs__link-btn-svg-wrapper">
                   <svg width="10" height="10">
@@ -695,6 +696,101 @@
             </li>
           </ul>
         </div>
+      </section>
+
+      <section class="reviews" data-test="reviews">
+        <div class="container reviews__container">
+          <h2>Отзывы</h2>
+        </div>
+        <div class="reviews__slider-container">
+          <div class="reviews__slider">
+            <ul class="reviews__list">
+              <li class="reviews__item">
+                <div class="reviews__item-header">
+                  <div class="rewievs__item-user">
+                    <picture>
+                      <source type="image/webp" srcset="img/reviews/lola.webp 1x, img/reviews/lola@2x.webp 2x">
+                      <img src="img/reviews/lola.png" srcset="img/reviews/lola@2x.png 2x" width="90" height="90"
+                        alt="Позьзователь." />
+                    </picture>
+                    <p>Лола Алекс</p>
+                  </div>
+                  <div class="reviews__item-data">
+                    <div class="revievs__item-program">
+                      <h3>Программа</h3>
+                      <p>Masa Art Challenge</p>
+                    </div>
+                    <div class="reviews__item-date">
+                      <h3>Дата</h3>
+                      <p>Осень 2022</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__item-main">
+                  <h3>Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в жизни!</h3>
+                  <p>Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления.
+                    Сочетание путешествий,
+                    общения и значимой работы действительно отличает её от других программ, и я чувствую огромную
+                    благодарность
+                    за предоставленную мне возможность.</p>
+                </div>
+              </li>
+              <li class="reviews__item">
+                <div class="reviews__item-header">
+                  <div class="rewievs__item-user">
+                    <picture>
+                      <source type="image/webp" srcset="img/reviews/david.webp 1x, img/reviews/david@2x.webp 2x">
+                      <img src="img/reviews/david.png" srcset="img/reviews/david@2x.png 2x" width="90" height="90"
+                        alt="Позьзователь." />
+                    </picture>
+                    <p>Давид Иванов</p>
+                  </div>
+                  <div class="reviews__item-data">
+                    <div class="revievs__item-program">
+                      <h3>Программа</h3>
+                      <p>Volunteer Chance</p>
+                    </div>
+                    <div class="reviews__item-date">
+                      <h3>Дата</h3>
+                      <p>Лето 2022</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__item-main">
+                  <h3>Благодаря опыту стажировки я узнал так много нового о себе и об окружающем мире.</h3>
+                  <p>Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень
+                    рекомендовал эту волонтёрскую
+                    программу всем, кто ищет значимый и незабываемый опыт. Организация была на высшем уровне. Для меня
+                    было честью быть
+                    частью такой удивительной инициативы.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="container reviews__buttons-slider-container">
+            <div class="swiper-pagination reviews__slider-pagination" data-slider="reviews-slider-pgn"></div>
+            <div class="reviews__buttons-container">
+              <button class="reviews__slider-button swiper-button-prev" type="button"
+                data-slider="reviews-slider-btn-prev">
+                <div class="reviews__btn-svg-wrapper">
+                  <svg width="10" height="10">
+                    <use href="__spritemap#sprite-arrow-left"></use>
+                  </svg>
+                </div>
+              </button>
+
+              <button class="reviews__slider-button swiper-button-next" type="button"
+                data-slider="reviews-slider-btn-next">
+                <div class="reviews__btn-svg-wrapper">
+                  <svg width="10" height="10">
+                    <use href="__spritemap#sprite-arrow-right"></use>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
       </section>
 
       <section class="contacts" data-test="contacts">
