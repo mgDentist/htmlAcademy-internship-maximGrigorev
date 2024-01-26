@@ -4,18 +4,24 @@ import Swiper from 'swiper/bundle';
 const initProgramsSlider = () => {
 
   const programsSlider = document.querySelector('[data-slider="programs-slider"]');
-  const programsPagination = document.querySelector('[data-slider="programs-slider-pgn"]');
+  // const programsPagination = document.querySelector('[data-slider="programs-slider-pgn"]');
+  const programsScrollbar = document.querySelector('[data-slider="programs-scrollbar"]');
   const programsBtnNext = document.querySelector('[data-slider="programs-slider-btn-next"]');
   const programsBtnPrev = document.querySelector('[data-slider="programs-slider-btn-prev"]');
 
   if (programsSlider) {
     new Swiper(programsSlider, {
 
-      pagination: {
-        el: programsPagination,
-        clickable: true,
+      // pagination: {
+      //   el: programsPagination,
+      //   clickable: true,
+      // },
+      scrollbar: {
+        el: programsScrollbar,
+        hide: false,
+        dragSize: 392,
       },
-      initialSlide: 0,
+      // initialSlide: 0,
       navigation: {
         nextEl: programsBtnNext,
         prevEl: programsBtnPrev,
@@ -25,26 +31,27 @@ const initProgramsSlider = () => {
       //   delay: 3000,
       // },
 
-      autoHeight: true,
+      // autoHeight: true,
       loop: false,
       breakpoints: {
-        1440: {
-          allowTouchMove: true,
-          slidesPerView: 3,
-          spaceBetween: 32,
-        },
-
-        768: {
-          allowTouchMove: true,
-          autoplay: false,
-          slidesPerView: 2,
-          spaceBetween: 30,
-        },
-
         320: {
           slidesPerView: 1,
-          spaceBetween: 15,
-        }
+          spaceBetween: 20,
+          allowTouchMove: true,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          allowTouchMove: true,
+          scrollbar: {
+            dragSize: 324,
+          },
+        },
+        1440: {
+          slidesPerView: 3,
+          spaceBetween: 32,
+          allowTouchMove: false,
+        },
       },
     });
   }

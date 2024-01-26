@@ -128,7 +128,7 @@
   padding: 0 100px 22px;
 
   @include vp-1439 {
-    max-width: 777px;
+    max-width: 1107px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 0 22px 45px;
@@ -172,17 +172,22 @@
 }
 
 .programs__item.swiper-slide {
-  width: 392px;
+  // width: 392px;
+  min-width: 392px;
+  max-width: 392px;
   flex-shrink: initial;
   display: flex;
   align-items: flex-end;
 
   @include vp-1439 {
-    width: 324px;
+    min-width: 324px;
+    max-width: 324px;
   }
 
   @include vp-767 {
-    width: 290px;
+    // width: 290px;
+    min-width: 290px;
+    max-width: 290px;
   }
 }
 
@@ -284,6 +289,7 @@
 .programs__buttons-slider-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0;
 
   @include vp-1439 {
@@ -296,6 +302,7 @@
   display: flex;
   align-self: center;
   gap: 10px;
+  margin-left: 64px;
 
   @include vp-767 {
     position: absolute;
@@ -309,39 +316,65 @@
   color: $color-cerulean-blue;
 }
 
-.programs__slider-pagination {
-  display: flex;
-  align-items: center;
-
+.programs__slider-scrollbar {
   @include vp-767 {
     display: none;
   }
 }
 
-.programs__slider-pagination .swiper-pagination-bullet {
-  z-index: 20;
-  width: 247px;
-  height: 1px;
-  background-color: $color-cerulean-blue;
-  opacity: 0.2;
+.programs__slider-scrollbar.swiper-scrollbar-horizontal {
+  width: 1105px;
+  height: 2px;
+  background-color: rgb($color-cerulean-blue, 0.2);
+  // position: absolute;
+  // bottom: 11px;
+  // left: 0;
 
-  @include vp-1439 {
-    width: 79px;
+  @include vp-767 {
+    width: 560px;
   }
-
-  @include vp-767 {}
 }
 
-.programs__slider-pagination .swiper-pagination-bullet-active {
-  width: 392px;
-  opacity: 1;
-
-  @include vp-1439 {
-    width: 324px;
-  }
-
-  @include vp-767 {}
+.programs__slider-scrollbar .swiper-scrollbar-drag {
+  height: 2px;
+  background: $color-cerulean-blue;
 }
+
+
+
+// .programs__slider-pagination {
+//   display: flex;
+//   align-items: center;
+
+//   @include vp-767 {
+//     display: none;
+//   }
+// }
+
+// .programs__slider-pagination .swiper-pagination-bullet {
+//   z-index: 20;
+//   width: 247px;
+//   height: 1px;
+//   background-color: $color-cerulean-blue;
+//   opacity: 0.2;
+
+//   @include vp-1439 {
+//     width: 79px;
+//   }
+
+//   @include vp-767 {}
+// }
+
+// .programs__slider-pagination .swiper-pagination-bullet-active {
+//   width: 392px;
+//   opacity: 1;
+
+//   @include vp-1439 {
+//     width: 324px;
+//   }
+
+//   @include vp-767 {}
+// }
 
 .programs__link-btn-svg-wrapper {
   width: 22px;
