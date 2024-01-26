@@ -4,30 +4,36 @@ import 'swiper/css';
 const initHeroSlider = () => {
 
   const heroSlider = document.querySelector('[data-slider="hero-slider"]');
-  const heroPagination = document.querySelector('[data-slider="hero-slider-pgn"]');
+  // const heroPagination = document.querySelector('[data-slider="hero-slider-pgn"]');
 
   if (heroSlider) {
     new Swiper(heroSlider, {
 
       pagination: {
-        el: heroPagination,
+        el: '.swiper-slide-active .hero__pagination',
         clickable: true,
       },
-
+      on: {
+        slideChangeTransitionStart: function () {
+          this.pagination.init();
+          this.pagination.render();
+          this.pagination.update();
+        }
+      },
       // autoplay: {
       //   delay: 3000,
       // },
-
       autoHeight: true,
       loop: true,
       breakpoints: {
         1440: {
-          allowTouchMove: true,
+          allowTouchMove: false,
         },
-
         768: {
           allowTouchMove: true,
-          autoplay: false,
+        },
+        320: {
+          allowTouchMove: true,
         },
       },
     });
