@@ -11,7 +11,7 @@
 }
 
 .reviews__container {
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
 
   h2 {
     font-size: 50px;
@@ -31,6 +31,7 @@
 }
 
 .reviews__slider-container {
+  position: relative;
   padding: 0 100px;
 
   @include vp-1439 {
@@ -42,9 +43,20 @@
   }
 }
 
-.reviews__item {
-  width: 604px;
+.reviews__list {
+  padding: 40px 0;
+
+  @include vp-767 {
+    padding: 30px 0;
+  }
+}
+
+.reviews__item.swiper-slide {
+  // width: 604px;
+  min-width: 604px;
+  max-width: 604px;
   min-height: 456px;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -53,12 +65,16 @@
   border-radius: 16px;
 
   @include vp-1439 {
-    width: 560px;
+    // width: 560px;
+    min-width: 560px;
+    max-width: 560px;
     min-height: 395px;
   }
 
   @include vp-767 {
-    width: 290px;
+    // width: 290px;
+    min-width: 290px;
+    max-width: 290px;
     min-height: 435px;
     gap: 25px;
     padding: 30px 15px;
@@ -169,17 +185,49 @@
   }
 }
 
+.reviews__buttons-slider-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+
+  @include vp-1439 {
+    // max-width: 560px;
+    padding: 0 45px 0 0;
+  }
+}
+
 .reviews__buttons-container {
   display: flex;
   align-self: center;
   gap: 10px;
+  margin-left: 64px;
 
   @include vp-767 {
-    // position: absolute;
-    // top: -20px;
-    // right: 15px;
-    // gap: 8px;
+    position: absolute;
+    top: -20px;
+    right: 15px;
+    gap: 8px;
   }
+}
+
+.reviews__slider-scrollbar.swiper-scrollbar-horizontal {
+  width: 1134px;
+  height: 2px;
+  background-color: rgb($color-cerulean-blue, 0.2);
+
+  @include vp-1439 {
+    width: 560px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.reviews__slider-scrollbar .swiper-scrollbar-drag {
+  height: 2px;
+  background: $color-cerulean-blue;
 }
 
 .reviews__btn-svg-wrapper {

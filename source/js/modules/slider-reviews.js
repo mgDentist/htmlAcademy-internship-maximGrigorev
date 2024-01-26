@@ -4,18 +4,19 @@ import Swiper from 'swiper/bundle';
 const initReviewsSlider = () => {
 
   const reviewsSlider = document.querySelector('[data-slider="reviews-slider"]');
-  const reviewsPagination = document.querySelector('[data-slider="reviews-slider-pgn"]');
+  // const reviewsPagination = document.querySelector('[data-slider="reviews-slider-pgn"]');
+  const reviewsScrollbar = document.querySelector('[data-slider="reviews-scrollbar"]');
   const reviewsBtnNext = document.querySelector('[data-slider="reviews-slider-btn-next"]');
   const reviewsBtnPrev = document.querySelector('[data-slider="reviews-slider-btn-prev"]');
 
   if (reviewsSlider) {
     new Swiper(reviewsSlider, {
 
-      pagination: {
-        el: reviewsPagination,
-        clickable: true,
-      },
-      initialSlide: 0,
+      // pagination: {
+      //   el: reviewsPagination,
+      //   clickable: true,
+      // },
+      // initialSlide: 0,
       navigation: {
         nextEl: reviewsBtnNext,
         prevEl: reviewsBtnPrev,
@@ -25,26 +26,29 @@ const initReviewsSlider = () => {
       //   delay: 3000,
       // },
 
-      autoHeight: true,
+      // autoHeight: true,
       loop: false,
+      scrollbar: {
+        el: reviewsScrollbar,
+        hide: false,
+        dragSize: 392,
+      },
       breakpoints: {
+        320: {
+          slidesPerView: 'auto',
+          spaceBetween: 15,
+        },
+        768: {
+          slidesPerView: 'auto',
+          spaceBetween: 30,
+          scrollbar: {
+            dragSize: 324,
+          }
+        },
         1440: {
-          allowTouchMove: true,
-          slidesPerView: 2,
+          slidesPerView: 'auto',
           spaceBetween: 32,
         },
-
-        768: {
-          allowTouchMove: true,
-          autoplay: false,
-          slidesPerView: 2,
-          spaceBetween: 30,
-        },
-
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 15,
-        }
       },
     });
   }
