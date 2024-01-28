@@ -559,7 +559,169 @@
 
       <section class="news" data-test="news">
         <div class="container news__container">
-          ???
+          <h2>Новости и материалы</h2>
+          <div class="news__tab-list-container">
+            <ul class="news__tab-list">
+              <li class="news__tab-item is-active">
+                <p>Общее</p>
+              </li>
+              <li class="news__tab-item">
+                <p>Волонтёрство</p>
+              </li>
+              <li class="news__tab-item">
+                <p>Стажировки</p>
+              </li>
+              <li class="news__tab-item">
+                <p>Карьера</p>
+              </li>
+              <li class="news__tab-item">
+                <p>Путешествия</p>
+              </li>
+            </ul>
+          </div>
+          <div class="news__slider-wrapper">
+            <ul class="news__slider">
+              <li class="news__slider-slide news__slider-slide--wide">
+                <div class="new__img-container">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="img/news/persons-desktop.webp 1x, img/news/persons-desktop@2x.webp 2x" width="" height="">
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/news/persons-tablet.webp 1x, img/news/persons-tablet@2x.webp 2x" width="" height="">
+                    <source type="image/webp"
+                      srcset="img/news/persons-mobile.webp 1x, img/news/persons-mobile@2x.webp 2x" width="" height="">
+                    <source type="image/jpeg" media="(min-width: 1440px)"
+                      srcset="img/news/persons-desktop.jpg 1x, img/news/persons-desktop@2x.jpg 2x" width="" height="">
+                    <source type="image/jpeg" media="(min-width: 768px)"
+                      srcset="img/news/persons-tablet.jpg 1x, img/news/persons-tablet@2x.jpg 2x" width="" height="">
+                    <img src="img/news/persons-mobile.jpg" srcset="img/news/persons-mobile@2x.jpg 2x" width="" height=""
+                      alt="" />
+                  </picture>
+                </div>
+
+                <span>23/03/2023</span>
+                <h3>Интервью с участницей программы стажировки</h3>
+                <div class="news__link-container">
+                  <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                  <a class="news__link news__link--little btn" href="#">
+                    <div class="news__link-svg-wrapper btn__wrapper">
+                      <svg width="10" height="10">
+                        <use href="__spritemap#sprite-arrow-up"></use>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </li>
+
+              <li class="news__slider-slide">
+                <div class="new__img-container">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="img/news/sea-desktop.webp 1x, img/news/sea-desktop@2x.webp 2x" width="" height="">
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/news/sea-tablet.webp 1x, img/news/sea-tablet@2x.webp 2x" width="" height="">
+                    <source type="image/webp" srcset="img/news/sea-mobile.webp 1x, img/news/persons-mobile@2x.webp 2x"
+                      width="" height="">
+                    <source type="image/jpeg" media="(min-width: 1440px)"
+                      srcset="img/news/sea-desktop.jpg 1x, img/news/sea-desktop@2x.jpg 2x" width="" height="">
+                    <source type="image/jpeg" media="(min-width: 768px)"
+                      srcset="img/news/sea-tablet.jpg 1x, img/news/sea-tablet@2x.jpg 2x" width="" height="">
+                    <img src="img/news/sea-mobile.jpg" srcset="img/news/sea-mobile@2x.jpg 2x" width="" height=""
+                      alt="" />
+                  </picture>
+                </div>
+
+                <span>20/03/2023</span>
+                <h3>Путешествуем по миру</h3>
+                <div class="news__link-container">
+                  <p>Какие места посещают наши студенты весной</p>
+                  <a class="news__link news__link--little btn" href="#">
+                    <div class="news__link-svg-wrapper btn__wrapper">
+                      <svg width="10" height="10">
+                        <use href="__spritemap#sprite-arrow-up"></use>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </li>
+
+              <li class="news__slider-slide">
+                <div class="new__img-container">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="img/news/volunteer-desktop.webp 1x, img/news/volunteer-desktop@2x.webp 2x" width=""
+                      height="">
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/news/volunteer-tablet.webp 1x, img/news/volunteer-tablet@2x.webp 2x" width=""
+                      height="">
+                    <source type="image/webp"
+                      srcset="img/news/volunteer-mobile.webp 1x, img/news/volunteer-mobile@2x.webp 2x" width=""
+                      height="">
+                    <source type="image/jpeg" media="(min-width: 1440px)"
+                      srcset="img/news/volunteer-desktop.jpg 1x, img/news/volunteer-desktop@2x.jpg 2x" width=""
+                      height="">
+                    <source type="image/jpeg" media="(min-width: 768px)"
+                      srcset="img/news/volunteer-tablet.jpg 1x, img/news/volunteer-tablet@2x.jpg 2x" width="" height="">
+                    <img src="img/news/volunteer-mobile.jpg" srcset="img/news/volunteer-mobile@2x.jpg 2x" width=""
+                      height="" alt="" />
+                  </picture>
+                </div>
+
+                <span>17/03/2023</span>
+                <h3>Новая программа волонтёрства</h3>
+                <div class="news__link-container">
+                  <p>Программа помощи детямдлительностью 4 месяца</p>
+                  <a class="news__link news__link--little btn" href="#">
+                    <div class="news__link-svg-wrapper btn__wrapper">
+                      <svg width="10" height="10">
+                        <use href="__spritemap#sprite-arrow-up"></use>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </li>
+
+              <li class="news__slider-slide">
+                <div class="new__img-container">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="img/news/computers-desktop.webp 1x, img/news/computers-desktop@2x.webp 2x" width=""
+                      height="">
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="img/news/computers-tablet.webp 1x, img/news/computers-tablet@2x.webp 2x" width=""
+                      height="">
+                    <source type="image/webp"
+                      srcset="img/news/computers-mobile.webp 1x, img/news/computers-mobile@2x.webp 2x" width=""
+                      height="">
+                    <source type="image/jpeg" media="(min-width: 1440px)"
+                      srcset="img/news/computers-desktop.jpg 1x, img/news/computers-desktop@2x.jpg 2x" width=""
+                      height="">
+                    <source type="image/jpeg" media="(min-width: 768px)"
+                      srcset="img/news/computers-tablet.jpg 1x, img/news/computers-tablet@2x.jpg 2x" width="" height="">
+                    <img src="img/news/computers-mobile.jpg" srcset="img/news/computers-mobile@2x.jpg 2x" width=""
+                      height="" alt="" />
+                  </picture>
+                </div>
+
+                <span>10/03/2023</span>
+                <h3>Построй свою карьеру</h3>
+                <div class="news__link-container">
+                  <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                  <a class="news__link news__link--little btn" href="#">
+                    <div class="news__link-svg-wrapper btn__wrapper">
+                      <svg width="10" height="10">
+                        <use href="__spritemap#sprite-arrow-up"></use>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </li>
+            </ul>
+
+            <div class="news__slider-pagination">pagination</div>
+
+            <div class="news__slider-navigation">navigation</div>
+          </div>
         </div>
       </section>
 
