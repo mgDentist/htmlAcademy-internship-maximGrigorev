@@ -79,7 +79,33 @@
   }
 }
 
-.news__slider-slide {
+.news__slider-wrapper {
+  width: 1240px;
+  position: relative;
+
+  @include vp-1439 {
+    width: 678px;
+  }
+
+  @include vp-767 {
+    width: 290px;
+  }
+}
+
+.news__slider.swiper-wrapper {
+  // height: 400px;
+  padding-bottom: 70px;
+
+  @include vp-1439 {
+    height: 730px;
+  }
+
+  @include vp-767 {
+    height: 590px;
+  }
+}
+
+.news__slider-slide.swiper-slide {
   position: relative;
   max-width: 286px;
   min-width: 286px;
@@ -101,75 +127,36 @@
     height: auto;
   }
 
-  &--wide {
-    max-width: 604px;
-    min-width: 604px;
-
-    @include vp-1439 {
-      max-width: 324px;
-      min-width: 324px;
-    }
-
-    @include vp-767 {
-      max-width: 290px;
-      min-width: 290px;
-    }
-
-    h3 {
-      width: 291px;
-
-      @include vp-1439 {
-        width: 207px;
-      }
-
-      @include vp-767 {
-        width: 200px;
-      }
-    }
-
-    .news__link-container {
-      width: 389px;
-
-      @include vp-1439 {
-        width: 240px;
-      }
-
-      @include vp-767 {
-        width: 263px;
-      }
-    }
-  }
-
   span {
     position: relative;
     padding: 12px 12px 6px 0;
     background-color: $color-alabaster;
     border-radius: 0 12px 0 0;
     color: $color-cerulean-blue;
-  }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -16px;
-    left: 0;
-    width: 16px;
-    height: 16px;
-    background-image: url("../../img/angle-up.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -16px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background-image: url("../../img/angle-up.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: -16px;
-    width: 16px;
-    height: 16px;
-    background-image: url("../../img/angle-up.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: -16px;
+      width: 16px;
+      height: 16px;
+      background-image: url("../../img/angle-up.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   h3 {
@@ -203,6 +190,45 @@
       background-image: url("../../img/angle-up.svg");
       background-repeat: no-repeat;
       background-position: center;
+    }
+  }
+}
+
+.news__slider-slide--wide.swiper-slide {
+  max-width: 604px;
+  min-width: 604px;
+
+  @include vp-1439 {
+    max-width: 324px;
+    min-width: 324px;
+  }
+
+  @include vp-767 {
+    max-width: 290px;
+    min-width: 290px;
+  }
+
+  h3 {
+    width: 291px;
+
+    @include vp-1439 {
+      width: 207px;
+    }
+
+    @include vp-767 {
+      width: 200px;
+    }
+  }
+
+  .news__link-container {
+    width: 389px;
+
+    @include vp-1439 {
+      width: 240px;
+    }
+
+    @include vp-767 {
+      width: 263px;
     }
   }
 }
@@ -260,42 +286,40 @@
 }
 
 .news__link {
-  &--little {
+  align-self: center;
+  padding: 5px;
+  background-color: $color-cerulean-blue;
+  border: none;
 
-    align-self: center;
-    padding: 5px;
-    border: none;
+  &:hover,
+  &:focus {
+    background-color: $color-transparent;
 
-    &:hover,
-    &:focus {
-      background-color: $color-transparent;
+    svg {
+      transform: rotate(45deg);
+      color: $color-cerulean-blue;
+    }
+  }
 
-      svg {
-        transform: rotate(45deg);
-        color: $color-cerulean-blue;
-      }
+  &:active {
+    svg {
+      opacity: 0.7;
+    }
+  }
+
+  &.disabled {
+    background-color: $color-transparent;
+    color: $color-mischka;
+    border-color: $color-mischka;
+    pointer-events: none;
+
+    .btn__wrapper {
+      background-color: $color-mischka;
     }
 
-    &:active {
-      svg {
-        opacity: 0.7;
-      }
-    }
-
-    &.disabled {
-      background-color: $color-transparent;
-      color: $color-mischka;
-      border-color: $color-mischka;
-      pointer-events: none;
-
-      .btn__wrapper {
-        background-color: $color-mischka;
-      }
-
-      svg {
-        color: $color-default-white;
-        opacity: 0.6;
-      }
+    svg {
+      color: $color-default-white;
+      opacity: 0.6;
     }
   }
 }
@@ -311,7 +335,117 @@
 }
 
 .news__link-svg-wrapper>svg {
+  color: $color-default-white;
+}
+
+.news__buttons-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  gap: 10px;
+}
+
+.news__link-btn-svg-wrapper {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  padding: 6px;
+  background-color: $color-transparent;
+  border-radius: 50%;
+  transition: background-color $trans-default;
+}
+
+.news__link-btn-svg-wrapper>svg {
   color: $color-cerulean-blue;
+}
+
+.news__slider-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.news__slider-button:hover .news__link-btn-svg-wrapper {
+  background-color: $color-default-white;
+}
+
+.news__slider-button:focus .news__link-btn-svg-wrapper {
+  background-color: $color-default-white;
+}
+
+.news__slider-button:active svg {
+  opacity: 0.7;
+}
+
+.news__slider-button:disabled svg {
+  color: $color-mischka;
+}
+
+.news__slider-button:disabled .news__link-btn-svg-wrapper {
+  background-color: $color-transparent;
+}
+
+.news__slider-pagination.swiper-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.swiper-pagination-bullet {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb($color-cerulean-blue, 0.5);
+  background-color: $color-alabaster;
+  border: 1px solid;
+  border-color: $color-transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition:
+    color $trans-default,
+    background-color $trans-default,
+    border-color $trans-default;
+
+  @include vp-767 {
+    width: 26px;
+    height: 26px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-cerulean-blue;
+    background-color: $color-transparent;
+    border-color: $color-cerulean-blue;
+    outline: none;
+  }
+
+  &:active {
+
+    color: $color-default-white;
+    background-color: $color-endeavour;
+    border-color: $color-endeavour;
+  }
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  color: $color-default-white;
+  background-color: $color-cerulean-blue;
+  border-color: $color-cerulean-blue;
 }
 
 @include vp-1439 {}
