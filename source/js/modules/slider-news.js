@@ -30,6 +30,11 @@ const initNewsSlider = () => {
           grid: {
             rows: 2,
           },
+
+          pagination: {
+            dynamicBullets: true,
+            dynamicMainBullets: 4,
+          }
         },
         768: {
           slidesPerView: 2,
