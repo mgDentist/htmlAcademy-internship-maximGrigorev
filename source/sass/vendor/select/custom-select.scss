@@ -113,34 +113,45 @@
 
   &__item {
     padding: 17px 20px;
-
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    color: #484848;
     outline: none;
     cursor: pointer;
 
-    transition: background-color 0.3s ease;
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
 
     &[aria-selected="true"] {
-      background-color: rgba(0, 0, 0, 0.2);
+      color: #f0efe9;
+      background-color: #275699;
 
       @media (hover: hover) {
         &:hover:not(.focus-visible) {
-          background-color: rgba(0, 0, 0, 0.2);
+          background-color: #316DC2;
+          color: #ffffff;
         }
       }
 
       &.focus-visible:focus {
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: #316DC2;
+        color: #ffffff;
       }
     }
 
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: #316DC2;
+        color: #ffffff;
       }
     }
 
     &.focus-visible:focus {
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: #316DC2;
+      color: #ffffff;
     }
   }
 
@@ -223,6 +234,11 @@
 
   &.not-empty {
     .custom-select__text {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 14px;
+      color: #F0EFE9;
       opacity: 1;
     }
 
