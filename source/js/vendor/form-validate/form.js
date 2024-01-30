@@ -1,4 +1,4 @@
-import {Validator} from './validator';
+import { Validator } from './validator';
 import {callbacks} from './callback';
 import {initPhoneInput} from './init-phone-input';
 
@@ -90,8 +90,15 @@ export class Form {
     form.noValidate = true;
 
     form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      this._onFormSubmit(event, callback);
+      if (this.validateForm(event.target)) {
+        if (this.isEmailAndPhoneValid(event.target)) {
+          this._onFormSubmit(event, callback);
+        } else {
+          event.preventDefault();
+        }
+      } else {
+        event.preventDefault();
+      }
     });
 
     form.addEventListener('input', (event) => {
@@ -103,8 +110,20 @@ export class Form {
     });
   }
 
+  isOptionsValid(form) {
+    const nameInput = form.querySelector('[name="name"]');
+    const phoneInput = form.querySelector('[name="phone"]');
+    const textAreaInput = form.querySelector('[name="textarea"]');
+    const customSelectInput = form.querySelector('.custom-select [data-select="data-select"]');
+
+    const isCustomSelectValid = customSelectInput && customSelectInput.dataset.selectValue !== '';
+
+    return nameInput.value.trim() !== '' && phoneInput.value.trim() !== '' && textAreaInput.value.trim() !== '' && isCustomSelectValid;
+  }
+
+
   init() {
-    this._validateParent = document.querySelectorAll('[data-form-validate]');
+    this._validateParent = document.querySelectorAll('[data-form-validate="data-form-validate"]');
     if (!this._validateParent.length) {
       return;
     }

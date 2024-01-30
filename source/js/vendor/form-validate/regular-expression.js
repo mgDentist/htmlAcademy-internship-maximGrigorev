@@ -27,18 +27,16 @@ export const getMatrixLimitationsRegEx = (matrix) => {
     case 'digit':
       return /[^\d]/g;
     case 'name':
-      return /[^\а-яё\А-ЯЁ\a-z\A-Z\-]]/g;
+      return /[^\u0430-\u044f\u0451\u0410-\u042f\u0401a-zA-Z-]/gu;
     case 'letters':
-      return /[^\а-яё\А-ЯЁ\a-z\A-Z]/g;
+      return /[^\u0430-\u044f\u0451\u0410-\u042f\u0401a-zA-Z]/gu;
     case 'letters-and-digit':
-      return /[^\а-яё\А-ЯЁ\a-z\A-Z\d]/g;
+      return /[^\u0430-\u044f\u0451\u0410-\u042f\u0401a-zA-Z\d]/gu;
     case 'cyrillic':
-      return /[^\а-яё\А-ЯЁ]/g;
+      return /[^\u0430-\u044f\u0451\u0410-\u042f\u0401]/gu;
     case 'latin':
-      return /[^\a-z\A-Z]/g;
+      return /[^\u0061-\u007a\u0041-\u005a]/gu;
     default:
       return false;
   }
 };
-
-export const getMailRegEx = () => /[a-zA-Zа-яёА-ЯЁ0-9]{1}([a-zA-Zа-яёА-ЯЁ0-9\-_\.]{1,})?@[a-zA-Zа-яёА-ЯЁ0-9\-]{1}([a-zA-Zа-яёА-ЯЁ0-9.\-]{1,})?[a-zA-Zа-яёА-ЯЁ0-9\-]{1}\.[a-zA-Zа-яёА-ЯЁ]{2,6}/;

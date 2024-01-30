@@ -1,4 +1,4 @@
-import {getLimitationsRegEx, getMatrixLimitationsRegEx, getMailRegEx} from './regular-expression';
+import {getLimitationsRegEx, getMatrixLimitationsRegEx} from './regular-expression';
 import {matrixReplace} from './matrix';
 import {Message} from './render-message';
 
@@ -6,7 +6,6 @@ export class Validator {
   constructor() {
     this._getLimitationsRegEx = getLimitationsRegEx;
     this._getMatrixLimitationsRegEx = getMatrixLimitationsRegEx;
-    this._getMailRegEx = getMailRegEx;
     this._matrixReplace = matrixReplace;
     this._message = new Message();
   }
@@ -83,17 +82,6 @@ export class Validator {
     return flag;
   }
 
-  _validateEmailInput(parent, input) {
-    let flag = true;
-    if (new RegExp(this._getMailRegEx(), '').test(input.value)) {
-      this._setItemValidState(parent, input);
-    } else {
-      this._setItemInvalidState(parent, input);
-      flag = false;
-    }
-    return flag;
-  }
-
   _validatePhoneInput(parent, input) {
     let flag = true;
     if (input.value.length >= +parent.dataset.phoneLength) {
@@ -129,16 +117,18 @@ export class Validator {
   _validateSelect(parent, input) {
     const options = input.querySelectorAll('option');
     const customSelectText = parent.querySelector('.custom-select__text');
-    input.setAttribute('aria-invalid', 'false');
     let flag = true;
+
     if (this._findSelectedOption(options)) {
       this._setItemValidState(parent, input);
     } else {
       this._setItemInvalidState(parent, input);
-      parent.classList.remove('not-empty');
+      parent.classList.remove('is-valid');
+      parent.classList.add('is-invalid');
       customSelectText.innerHTML = '';
       flag = false;
     }
+
     return flag;
   }
 
@@ -190,7 +180,7 @@ export class Validator {
   _customExample(parent, input) {
     let flag = true;
     if (!input.value.length) {
-      parent.dataset.messageBase = 'Поле обязательно к заполнению';
+      parent.dataset.messageBase = 'Незаполненное поле';
       this._setItemInvalidState(parent, input);
       flag = false;
     } else if (input.value.length < input.minLength) {
@@ -295,4 +285,6 @@ export class Validator {
     const result = this._fullValidate(validateItems);
     return result;
   }
+
+
 }
