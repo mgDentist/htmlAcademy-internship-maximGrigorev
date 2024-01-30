@@ -10,7 +10,6 @@ import { initHeroSlider } from './modules/slider-hero';
 import { initProgramsSlider } from './modules/slider-programs';
 import { initReviewsSlider } from './modules/slider-reviews';
 import { initNewsSlider } from './modules/slider-news';
-import { newsTitleToggle } from './modules/news-titles-toggle';
 
 import { CustomSelect } from './vendor/select/custom-select';
 
@@ -29,7 +28,6 @@ window.addEventListener('DOMContentLoaded', () => {
   initProgramsSlider();
   initReviewsSlider();
   initNewsSlider();
-  newsTitleToggle();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
