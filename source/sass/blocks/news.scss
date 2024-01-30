@@ -38,6 +38,13 @@
   justify-content: center;
   overflow-x: auto;
 
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+
   @include vp-767 {
     justify-content: flex-start;
   }
