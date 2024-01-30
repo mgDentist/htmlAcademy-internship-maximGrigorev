@@ -10,6 +10,7 @@ import { initHeroSlider } from './modules/slider-hero';
 import { initProgramsSlider } from './modules/slider-programs';
 import { initReviewsSlider } from './modules/slider-reviews';
 import { initNewsSlider } from './modules/slider-news';
+import { Form } from './vendor/form-validate/form';
 
 import { CustomSelect } from './vendor/select/custom-select';
 
@@ -33,9 +34,10 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     // initModals();
-    // const form = new Form();
-    // window.form = form;
-    // form.init();
+    const form = new Form();
+    window.form = form;
+    form.init();
+
     // initTabs();
     initAccordions();
 
