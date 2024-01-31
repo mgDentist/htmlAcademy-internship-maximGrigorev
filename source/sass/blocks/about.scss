@@ -1,12 +1,12 @@
 .about {
-  padding: 120px 0;
+  margin: 120px 0;
 
   @include vp-1439 {
-    padding: 100px 0;
+    margin: 100px 0;
   }
 
   @include vp-767 {
-    padding: 60px 0;
+    margin: 60px 0 60px;
   }
 }
 
@@ -26,7 +26,7 @@
 
   @include vp-1439 {
     flex-direction: column;
-    gap: 35px;
+    gap: 30px;
   }
 }
 
@@ -43,18 +43,22 @@
 }
 
 .about__proj-wrapper>h2 {
-  margin-bottom: 30px;
+  margin-bottom: 37px;
   font-size: 50px;
   font-weight: 400;
   line-height: 50px;
   color: $color-cerulean-blue;
 
   @include vp-1439 {
+    margin-bottom: 23px;
     font-size: 34px;
     line-height: 50px;
   }
 
   @include vp-767 {
+    margin-left: 1px;
+    margin-top: 1px;
+    margin-bottom: 14px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -79,49 +83,50 @@
   min-width: 498px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
 
   @include vp-1439 {
     max-width: 498px;
-    gap: 30px;
   }
 
   @include vp-767 {
     min-width: 290px;
-    gap: 20px;
   }
 }
 
 .about__aim-wrapper>h3 {
-  // margin-bottom: 40px;
+  margin-bottom: 31px;
   font-size: 32px;
   font-weight: 400;
   line-height: 36px;
   color: $color-cerulean-blue;
 
   @include vp-1439 {
+    margin-bottom: 23px;
     font-size: 28px;
     line-height: 28px;
   }
 
   @include vp-767 {
+    margin-bottom: 11px;
     font-size: 18px;
     line-height: 22px;
   }
 }
 
 .about__aim-wrapper>p {
-  margin-bottom: 10px;
+  margin-bottom: 33px;
   padding-right: 106px;
   font-size: 16px;
   line-height: 26px;
 
   @include vp-1439 {
+    margin-bottom: 36px;
     padding-right: 0;
     line-height: 20px;
   }
 
   @include vp-767 {
+    margin-bottom: 25px;
     font-size: 14px;
     line-height: 20px;
   }
@@ -130,10 +135,27 @@
 .about__link {
   gap: 30px;
   align-self: flex-start;
+  padding: 2px 4px 4px 30px;
   background-color: $color-transparent;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.28px;
   transition:
     background-color $trans-modal,
     color $trans-modal;
+
+  @include vp-1439 {
+    padding: 3px 4px 3px 30px;
+  }
+
+  @include vp-767 {
+    gap: 21px;
+    padding: 4px 4px 4px 20px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+  }
 
   &:hover,
   &:focus {
@@ -169,19 +191,10 @@
       opacity: 0.6;
     }
   }
-
-  @include vp-1439 {
-    gap: 20px;
-    padding-left: 20px;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 12px;
-    letter-spacing: 0.24px;
-  }
 }
 
 .about__scheme {
-  padding: 50px 106px;
+  padding: 50px 106px 36px;
   background-color: $color-cerulean-blue;
   border-radius: 20px;
 
@@ -199,7 +212,8 @@
 .about__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
+  column-gap: 32px;
+  row-gap: 34px;
 
   @include vp-1439 {
     column-gap: 30px;
@@ -208,6 +222,7 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
+    row-gap: 0;
   }
 }
 
@@ -228,12 +243,14 @@
   }
 }
 
-.about__item:nth-child(2) h4 {
-  min-width: 171px;
-  margin-right: 26px;
+.about__item:nth-child(2) {
+  h4 {
+    min-width: 171px;
+    margin-right: 26px;
 
-  @include vp-1439 {
-    margin-right: 0;
+    @include vp-1439 {
+      margin-right: 0;
+    }
   }
 }
 
@@ -258,9 +275,28 @@
 .about__item-wrapper {
   position: relative;
   display: flex;
-  padding: 30px 60px;
+  padding: 30px 60px 20px;
   border: 1px solid $color-alabaster;
   border-radius: 16px;
+
+  @include vp-1439 {
+    min-height: 168px;
+    max-width: 546px;
+    flex-direction: column;
+    row-gap: 12px;
+    padding: 30px 15px 23px 30px;
+  }
+
+  @include vp-767 {
+    max-width: 460px;
+    min-height: 128px;
+    row-gap: 6px;
+    padding: 19px 19px 20px 19px;
+
+    &::before {
+      background-size: 18px;
+    }
+  }
 
   &::before {
     content: "";
@@ -275,23 +311,16 @@
     background-image: url('../../img/star.svg');
     background-position: center;
     background-repeat: no-repeat;
+
+    @include vp-767 {
+      top: -2px;
+    }
   }
 
-  @include vp-1439 {
-    min-height: 168px;
-    max-width: 546px;
-    flex-direction: column;
-    row-gap: 12px;
-    padding: 30px;
-  }
+  &--diff-padding {
 
-  @include vp-767 {
-    max-width: 460px;
-    row-gap: 8px;
-    padding: 24px 19px 24px 20px;
-
-    &::before {
-      background-size: 18px;
+    @include vp-767 {
+      padding-bottom: 24px;
     }
   }
 }
@@ -317,6 +346,7 @@
 }
 
 .about__item-wrapper>p {
+  margin-top: -3px;
   font-size: 16px;
   font-weight: 300;
   line-height: 20px;
@@ -341,6 +371,18 @@
 }
 
 .about__br-desktop {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.about__br-tablet {
+  display: none;
+
+  @include vp-1439 {
+    display: block;
+  }
+
   @include vp-767 {
     display: none;
   }
