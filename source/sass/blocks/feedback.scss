@@ -218,12 +218,12 @@
     }
   }
 
-  select {
-    min-height: 50px;
-    background-color: $color-transparent;
-    border: 1px solid rgb($color-default-white, 0.3);
-    border-radius: 8px;
-  }
+  // select {
+  //   min-height: 50px;
+  //   background-color: $color-transparent;
+  //   border: 1px solid rgb($color-default-white, 0.3);
+  //   border-radius: 8px;
+  // }
 }
 
 .feedback__form-button {

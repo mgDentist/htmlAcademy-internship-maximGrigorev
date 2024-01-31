@@ -1,0 +1,330 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  transform: scale(1.1);
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+  pointer-events: none;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__wrapper {
+    transform: translateZ(0);
+    background-color: rgba(#000000, 0.6);
+    position: relative;
+
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 60px 40px;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+  }
+
+  &__content {
+    position: relative;
+    width: 510px;
+    padding: 60px 80px;
+    background-color: #ffffff;
+    border-radius: 16px;
+
+    // @include vp-1439 {}
+
+    @media (max-width: 1440px) {}
+
+    @media (max-width: 768px) {
+      width: 290px;
+      padding: 40px 15px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 36px;
+      text-align: center;
+      color: #316DC2;
+
+      @include vp-767 {
+        font-size: 18px;
+        line-height: 18px;
+      }
+    }
+
+    p {
+      margin-bottom: 30px;
+      line-height: 26px;
+      text-align: center;
+
+      @include vp-767 {
+        max-width: 220px;
+        margin: 0 auto 25px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    @include vp-767 {
+      top: 20px;
+      right: 20px;
+    }
+
+    svg {
+      display: block;
+      color: #316DC2;
+    }
+  }
+
+  &--preload {
+    transition: none;
+  }
+
+  &.is-active {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+    pointer-events: auto;
+  }
+
+  iframe {
+    max-width: 100%;
+    border: none;
+  }
+}
+
+.modal__form {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    min-height: 50px;
+    padding: 5px 25px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid;
+    border-color: rgb(#484848, 0.3);
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+
+    @include vp-767 {
+      min-height: 44px;
+    }
+
+    &:hover {
+      border-color: rgb(#484848, 1);
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+      border-color: rgb(#484848, 1);
+      color: #484848;
+    }
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.modal__form-label {
+  margin-bottom: 20px;
+
+  span {
+    font-size: 14px;
+    line-height: 18px;
+    opacity: 0.8;
+
+    @include vp-767 {
+      line-height: 14px;
+    }
+  }
+}
+
+.modal__form-label--checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+
+  label {
+    flex-direction: row;
+    margin-bottom: 14px;
+    margin-top: 14px;
+  }
+
+  span {
+    font-size: 12px;
+    line-height: 12px;
+    opacity: 0.9;
+
+    @include vp-767 {
+      line-height: 14px;
+    }
+  }
+}
+
+.modal__custom-checkbox {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: $color-transparent;
+  border: 1px solid;
+  border-color: rgb($color-default-black, 0.7);
+  border-radius: 2px;
+  transition:
+    background-color $trans-default,
+    border-color $trans-default;
+
+  &:hover,
+  &:focus {
+    border-color: $color-default-black;
+  }
+
+  svg {
+    display: none;
+    color: $color-default-white;
+  }
+}
+
+.modal__default-checkbox:checked+.modal__custom-checkbox {
+  background-color: $color-default-white;
+  border-color: $color-cerulean-blue;
+
+  &:hover,
+  &:focus {
+    background-color: $color-cerulean-blue;
+
+    svg {
+      color: $color-default-white;
+    }
+  }
+}
+
+.modal__default-checkbox:checked+.modal__custom-checkbox svg {
+  display: block;
+  color: $color-cerulean-blue;
+}
+
+.modal__default-checkbox:disabled+.modal__custom-checkbox {
+  border-color: $color-default-white;
+  background-color: rgb($color-transparent, 0.6);
+  pointer-events: none;
+  cursor: not-allowed;
+  outline: none;
+}
+
+.modal__default-checkbox:checked:disabled+.modal__custom-checkbox {
+  background-color: $color-mischka;
+  border-color: $color-mischka;
+  pointer-events: none;
+  cursor: not-allowed;
+  outline: none;
+
+  svg {
+    color: $color-default-white;
+  }
+}
+
+.modal__form-button {
+  width: 194px;
+  justify-content: space-between;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+
+  @include vp-767 {
+    width: 100%;
+    padding-left: 80px;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+  }
+}
+
+.modal__form-select.not-empty {
+  .custom-select__text {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    color: #484848;
+    opacity: 1;
+  }
+}
+
+.custom-select__button--modal:hover {
+  border: 1px solid #484848;
+}
+
+.modal__form-label.is-invalid input {
+  border: 1px solid #ff5e66;
+  background: rgba(255, 94, 102, 0.2);
+}
+
+.modal__form-label.is-invalid .custom-select__button {
+  border: 1px solid #ff5e66;
+  background: rgba(255, 94, 102, 0.2);
+}
+
+.modal__form-label.is-invalid .modal__custom-checkbox {
+  border: 1px solid #FF5E66;
+  opacity: 0.7;
+  background: rgba(255, 94, 102, 0.20);
+}

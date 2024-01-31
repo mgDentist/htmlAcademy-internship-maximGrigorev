@@ -29,3 +29,13 @@
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
 }
+
+.scroll-lock-ios {
+  position: fixed;
+
+  overflow: hidden;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}

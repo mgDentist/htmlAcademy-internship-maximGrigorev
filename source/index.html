@@ -273,13 +273,13 @@
                 предоставляя им инструменты для решения сложных проблем, с которыми сталкиваются в мире. Цель центра —
                 наделить этих
                 людей способностью инициировать значимые изменения.</p>
-              <a class="about__link btn" href="#">Подробнее о проекте
+              <button class="about__link btn" data-open-modal="modal-main">Подробнее о проекте
                 <div class="about__link-svg-wrapper btn__wrapper">
                   <svg width="10" height="10">
                     <use href="__spritemap#sprite-arrow-up"></use>
                   </svg>
                 </div>
-              </a>
+              </button>
             </div>
           </div>
           <div class="about__scheme">
@@ -1329,7 +1329,7 @@
                       <span>
                         Ваше сообщение
                       </span>
-                      <textarea name="message" id="message" required></textarea>
+                      <textarea name="message" required></textarea>
                     </label>
                   </div>
 
@@ -1466,6 +1466,88 @@
   <div data-test="footer">footer</div> -->
 
   <div class="overlay" data-burger="overlay"></div>
+
+  <div class="modal modal--preload" data-modal="modal-main">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal="data-close-modal"></div>
+      <div class="modal__content">
+        <button class="modal__close-btn" type="button" data-close-modal="data-close-modal" aria-label="Закрыть попап">
+          <svg width="16" height="16">
+            <use href="__spritemap#sprite-cross"></use>
+          </svg>
+        </button>
+        <h2>Напишите нам</h2>
+        <p>Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+        <div class="modal__form" data-form-validate="data-form-validate">
+          <form action="https://echo.htmlacademy.ru/" autocomplete="off" method="post">
+            <div class="modal__form-label" data-validate-type="text" data-on-input-validate="data-on-input-validate"
+              data-required="data-required">
+              <label>
+                <span>
+                  Имя
+                </span>
+                <input type="text" name="name" required>
+              </label>
+            </div>
+
+            <div class="modal__form-label" data-validate-type="phone" data-on-input-validate="data-on-input-validate"
+              data-required="data-required">
+              <label>
+                <span>
+                  Телефон
+                </span>
+                <input type="tel" name="tel" required>
+              </label>
+            </div>
+
+            <div class="custom-select modal__form-select modal__form-label" data-select="data-select"
+              data-validate-type="select" data-name="Город" data-message-base="Поле обязательно к заполнению">
+              <span>Выберите город</span>
+              <button class="custom-select__button custom-select__button--modal" type="button"
+                aria-label="Выберите одну из опций">
+                <span class="custom-select__text"></span>
+                <span class="custom-select__icon custom-select__icon--modal"></span>
+              </button>
+              <ul class="custom-select__list custom-select__list--modal">
+                <li class="custom-select__item" tabindex="0" data-select-value="Санкт-Петербург">Санкт-Петербург
+                </li>
+                <li class="custom-select__item" tabindex="0" data-select-value="Санкт-Петербург">Санкт-Петербург
+                </li>
+                <li class="custom-select__item" tabindex="0" data-select-value="Санкт-Петербург">Санкт-Петербург
+                </li>
+                <li class="custom-select__item" tabindex="0" data-select-value="Санкт-Петербург">Санкт-Петербург
+                </li>
+              </ul>
+            </div>
+
+            <div class="modal__form-label modal__form-label--checkbox" data-validate-type="checkbox"
+              data-message-base="">
+              <label>
+                <input class="visually-hidden modal__default-checkbox" type="checkbox" name="agree" id="agree">
+                <div class="modal__custom-checkbox">
+                  <svg width="10" height="10">
+                    <use href="__spritemap#sprite-check"></use>
+                  </svg>
+                </div>
+                <span>
+                  Я согласен на обработку моих персональных данных
+                </span>
+              </label>
+            </div>
+
+            <button class="modal__form-button btn" type="submit">
+              <span>Отправить</span>
+              <div class="modal__btn-wrapper btn__wrapper btn__wrapper--invert">
+                <svg width="10" height="10">
+                  <use href="__spritemap#sprite-arrow-up"></use>
+                </svg>
+              </div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script type="module" src="js/main.js"></script>
 </body>

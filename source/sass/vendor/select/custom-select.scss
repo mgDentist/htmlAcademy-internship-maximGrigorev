@@ -320,7 +320,27 @@
   }
 }
 
-// .custom-select.is-invalid .custom-select__button {
-//   border: 1px solid #ff5e66;
-//   background: rgba(255, 94, 102, 0.2);
-// }
+.custom-select__button {
+  &--modal {
+    height: 50px;
+    margin-top: 12px;
+    background-color: transparent;
+    border: 1px solid rgba(72, 72, 72, 0.30);
+
+    @media (max-width: 768px) {
+      height: 44px;
+    }
+  }
+}
+
+.custom-select__icon {
+  &--modal {
+    background-color: #484848;
+  }
+}
+
+.custom-select__list {
+  &--modal {
+    border: 1px solid #484848;
+  }
+}
