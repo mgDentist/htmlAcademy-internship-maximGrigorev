@@ -4,7 +4,6 @@ import 'swiper/css';
 const initHeroSlider = () => {
 
   const heroSlider = document.querySelector('[data-slider="hero-slider"]');
-  // const heroPagination = document.querySelector('[data-slider="hero-slider-pgn"]');
 
   if (heroSlider) {
     new Swiper(heroSlider, {

@@ -7,6 +7,10 @@
   transition: transform $trans-modal;
   transform: translateY(0);
   padding-top: 30px;
+
+  @include vp-767 {
+    padding-top: 20px;
+  }
 }
 
 .header__container {
@@ -28,6 +32,12 @@
     width $trans-modal,
     color $trans-modal,
     background-color $trans-modal;
+
+  @include vp-767 {
+    width: 135px;
+    gap: 20px;
+    padding: 3px 4px 3px 20px;
+  }
 }
 
 .header__button svg:nth-of-type(2) {
