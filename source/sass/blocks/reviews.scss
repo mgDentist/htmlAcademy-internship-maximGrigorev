@@ -1,8 +1,10 @@
 .reviews {
-  margin-bottom: 120px;
+  margin-bottom: 114px;
+  padding-bottom: 5px;
 
   @include vp-1439 {
     margin-bottom: 100px;
+    padding-bottom: 0;
   }
 
   @include vp-767 {
@@ -14,12 +16,16 @@
   // margin-bottom: 40px;
 
   h2 {
+    margin-left: 3px;
+    margin-top: 3px;
+    margin-bottom: 4px;
     font-size: 50px;
     font-weight: 400;
     line-height: 50px;
     color: $color-cerulean-blue;
 
     @include vp-1439 {
+      margin-left: 0;
       font-size: 34px;
     }
 
@@ -44,7 +50,12 @@
 }
 
 .reviews__list {
-  padding: 40px 0;
+  // padding: 40px 0 35px;
+  padding: 42px 0 35px;
+
+  @include vp-1439 {
+    padding: 36px 0 39px;
+  }
 
   @include vp-767 {
     padding: 30px 0;
@@ -52,27 +63,26 @@
 }
 
 .reviews__item.swiper-slide {
-  // width: 604px;
   min-width: 604px;
   max-width: 604px;
   min-height: 456px;
   height: auto;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding: 50px;
+  gap: 27px;
+  padding: 50px 50px 43px 49px;
   border: 1px solid $color-cerulean-blue;
   border-radius: 16px;
 
   @include vp-1439 {
-    // width: 560px;
     min-width: 560px;
     max-width: 560px;
     min-height: 395px;
+    gap: 24px;
+    padding: 50px 49px 46px 49px;
   }
 
   @include vp-767 {
-    // width: 290px;
     min-width: 290px;
     max-width: 290px;
     min-height: 435px;
@@ -96,7 +106,11 @@
 .rewievs__item-user {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 14px;
+
+  @include vp-1439 {
+    gap: 15px;
+  }
 
   @include vp-767 {
     gap: 10px;
@@ -110,19 +124,44 @@
   line-height: 24px;
   color: $color-cerulean-blue;
 
-
-  @include vp-767 {
-    font-size: 14px;
-    line-height: 18px;
+  @include vp-1439 {
+    gap: 0;
   }
+
+  p {
+    font-size: 18px;
+    line-height: 24px;
+
+    @include vp-1439 {
+      font-size: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+.revievs__item-program,
+.reviews__item-date {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 2px;
 }
 
 .reviews__item-data {
   display: flex;
   gap: 25px;
 
+  @include vp-1439 {
+    margin-right: 1px;
+  }
+
   h3 {
-    margin-bottom: 11px;
+    // margin-top: 9px;
+    // margin-bottom: 11px;
     font-size: 12px;
     font-weight: 400;
     line-height: 12px;
@@ -153,13 +192,16 @@
 
 .reviews__item-main {
   h3 {
-    margin-bottom: 25px;
+    // margin-top: 9px;
+    // margin-bottom: 25px;
+    margin-bottom: 14px;
     font-size: 24px;
     font-weight: 400;
     line-height: 26px;
     color: $color-cerulean-blue;
 
     @include vp-1439 {
+      margin-bottom: 16px; //??
       font-size: 20px;
       line-height: 24px;
     }
@@ -172,7 +214,6 @@
   }
 
   p {
-    font-size: 16px;
     line-height: 26px;
 
     @include vp-1439 {
@@ -201,7 +242,7 @@
   display: flex;
   align-self: center;
   gap: 10px;
-  margin-left: 64px;
+  margin-left: auto;
 
   @include vp-767 {
     position: absolute;
@@ -271,7 +312,3 @@
 .reviews__slider-button:disabled .reviews__link-btn-svg-wrapper {
   background-color: $color-transparent;
 }
-
-@include vp-1439 {}
-
-@include vp-767 {}
