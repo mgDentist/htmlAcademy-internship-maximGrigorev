@@ -158,11 +158,11 @@
 
 .grant__item span {
   position: absolute;
-  width: 30px;
-  height: 35px;
-  top: -9px;
-  left: -15px;
-  padding: 10px 4px;
+  width: 42px;
+  height: 42px;
+  top: -16px;
+  left: -21px;
+  padding: 10px;
   background-color: $color-cerulean-blue;
   border-radius: 50px;
   text-align: center;
@@ -175,6 +175,11 @@
   @include vp-1439 {}
 
   @include vp-767 {
+    width: 30px;
+    height: 35px;
+    top: -9px;
+    left: -15px;
+    padding: 10px 4px;
     font-size: 18px;
     line-height: 18px;
   }
