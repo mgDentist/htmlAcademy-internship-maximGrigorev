@@ -20,7 +20,9 @@
     text-align: center;
 
     @include vp-1439 {
-      margin-bottom: 40px;
+      margin-top: -3px;
+      // margin-bottom: 41px;
+      margin-bottom: 38px;
       font-size: 34px;
     }
 
@@ -67,11 +69,35 @@
     padding: 20px 15px;
   }
 
+  &:nth-child(1) {
+    @include vp-1439 {
+      padding: 29px 30px 29px;
+
+      .faq__svg-wrapper {
+        margin-top: 2px;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    @include vp-1439 {
+      padding: 29px 30px 29px;
+    }
+  }
+
   &:nth-child(4) {
     padding: 33px 40px 31px;
 
     .faq__svg-wrapper {
       margin-top: -14px;
+    }
+
+    @include vp-1439 {
+      padding: 24px 30px 24px 29px;
+
+      .faq__svg-wrapper {
+        margin-top: 0;
+      }
     }
   }
 
@@ -80,6 +106,14 @@
 
     .faq__svg-wrapper {
       margin-top: -14px;
+    }
+
+    @include vp-1439 {
+      padding: 24px 30px 22px 29px;
+
+      .faq__svg-wrapper {
+        margin-top: -1px;
+      }
     }
   }
 
@@ -91,6 +125,7 @@
 
 
     @include vp-1439 {
+      max-width: 600px;
       font-size: 22px;
       line-height: 26px;
     }
@@ -138,7 +173,7 @@
   ;
 
   @include vp-1439 {
-    margin-left: 107px;
+    margin-left: 100px;
   }
 
   @include vp-767 {
@@ -156,16 +191,28 @@
   padding: 37px 40px 32px;
   background-color: $color-cerulean-blue;
 
+  @include vp-1439 {
+    padding: 29px 29px 24px;
+  }
+
   h3 {
     color: $color-default-white;
   }
 
   p {
     color: $color-alabaster;
+
+    @include vp-1439 {
+      max-width: 585px;
+    }
   }
 
   .faq__title-container {
     margin-bottom: 13px;
+
+    @include vp-1439 {
+      margin-bottom: 17px;
+    }
   }
 
   .faq__svg-wrapper {
