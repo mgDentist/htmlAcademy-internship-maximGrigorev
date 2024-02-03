@@ -28,7 +28,7 @@
 
   &__wrapper {
     transform: translateZ(0);
-    background-color: rgba(#000000, 0.6);
+    background-color: rgba($color-default-black, 0.6);
     position: relative;
 
     display: flex;
@@ -55,14 +55,10 @@
     position: relative;
     width: 510px;
     padding: 60px 80px;
-    background-color: #ffffff;
+    background-color: $color-default-white;
     border-radius: 16px;
 
-    // @include vp-1439 {}
-
-    @media (max-width: 1440px) {}
-
-    @media (max-width: 768px) {
+    @include vp-767 {
       width: 290px;
       padding: 40px 15px;
     }
@@ -74,7 +70,7 @@
       font-weight: 400;
       line-height: 36px;
       text-align: center;
-      color: #316DC2;
+      color: $color-cerulean-blue;
 
       @include vp-767 {
         font-size: 18px;
@@ -114,7 +110,14 @@
 
     svg {
       display: block;
-      color: #316DC2;
+      color: $color-cerulean-blue;
+    }
+
+    &:hover,
+    &:active {
+      svg {
+        color: $color-endeavour;
+      }
     }
   }
 
@@ -146,10 +149,10 @@
   input {
     min-height: 50px;
     padding: 5px 25px;
-    color: #ffffff;
+    color: $color-default-white;
     background-color: transparent;
     border: 1px solid;
-    border-color: rgb(#484848, 0.3);
+    border-color: rgb($color-default-black, 0.3);
     border-radius: 8px;
     transition: border-color 0.3s ease;
 
@@ -158,14 +161,14 @@
     }
 
     &:hover {
-      border-color: rgb(#484848, 1);
+      border-color: rgb($color-default-black, 1);
     }
 
     &:active,
     &:focus {
       outline: none;
-      border-color: rgb(#484848, 1);
-      color: #484848;
+      border-color: rgb($color-default-black, 1);
+      color: $color-default-black;
     }
   }
 
@@ -193,12 +196,12 @@
 .modal__form-label--checkbox {
   position: relative;
   padding-left: 30px;
-  cursor: pointer;
 
   label {
     flex-direction: row;
     margin-bottom: 14px;
     margin-top: 14px;
+    cursor: pointer;
   }
 
   span {
@@ -239,6 +242,10 @@
     display: none;
     color: $color-default-white;
   }
+}
+
+.modal__default-checkbox:focus+.modal__custom-checkbox {
+  border-color: $color-default-black;
 }
 
 .modal__default-checkbox:checked+.modal__custom-checkbox {
@@ -296,6 +303,41 @@
     line-height: 12px;
     letter-spacing: 0.24px;
   }
+
+  &:hover,
+  &:focus {
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
+
+    .modal__btn-wrapper {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      transform: rotate(45deg);
+      color: $color-cerulean-blue;
+    }
+  }
+
+  &:active {
+    color: rgb($color-default-white, 0.7);
+  }
+
+  &:disabled {
+    background-color: $color-transparent;
+    color: $color-mischka;
+    border-color: $color-mischka;
+    pointer-events: none;
+
+    .modal__btn-wrapper {
+      background-color: $color-mischka;
+    }
+
+    svg {
+      color: $color-default-white;
+      opacity: 0.6;
+    }
+  }
 }
 
 .modal__form-select.not-empty {
@@ -310,6 +352,10 @@
 }
 
 .custom-select__button--modal:hover {
+  border: 1px solid #484848;
+}
+
+.custom-select__button--modal:focus {
   border: 1px solid #484848;
 }
 

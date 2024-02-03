@@ -35,11 +35,9 @@
 }
 
 .faq__title-container {
-  // position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // margin-bottom: 20px;
 }
 
 .faq__list {
@@ -60,6 +58,7 @@
   transition:
     color $trans-default,
     background-color $trans-default;
+  cursor: pointer;
 
   @include vp-1439 {
     padding: 30px;
@@ -167,9 +166,6 @@
 }
 
 .faq__svg-wrapper {
-  // position: absolute;
-  // top: -2;
-  // right: 0;
   flex-shrink: 0;
   width: 40px;
   height: 40px;
@@ -178,14 +174,13 @@
   align-items: center;
   color: $color-default-white;
   background-color: $color-cerulean-blue;
+  border: 1px solid;
+  border-color: $color-cerulean-blue;
   border-radius: 50%;
-  // opacity: 1;
-  // visibility: visible;
   transition:
     color $trans-default,
     background-color $trans-default,
-    // opacity $trans-default,
-    // visibility $trans-default
+    border-color $trans-default,
   ;
 
   @include vp-1439 {
@@ -198,8 +193,6 @@
 
   &--minus {
     display: none;
-    // opacity: 0;
-    // visibility: hidden;
   }
 }
 
@@ -242,17 +235,14 @@
   .faq__svg-wrapper {
     color: $color-cerulean-blue;
     background-color: $color-default-white;
+    border-color: $color-default-white;
 
     &--plus {
       display: none;
-      // opacity: 0;
-      // visibility: hidden;
     }
 
     &--minus {
       display: flex;
-      // opacity: 1;
-      // visibility: visible;
     }
   }
 }
@@ -265,6 +255,47 @@
   }
 }
 
-@include vp-1439 {}
+.faq__item:hover,
+.faq__item:focus {
+  background-color: $color-default-white;
 
-@include vp-767 {}
+  .faq__svg-wrapper {
+    color: $color-cerulean-blue;
+    background-color: $color-default-white;
+    border-color: $color-cerulean-blue;
+  }
+}
+
+.faq__item:active {
+  color: $color-endeavour;
+
+  .faq__svg-wrapper {
+    color: $color-default-white;
+    background-color: $color-endeavour;
+    border-color: $color-endeavour;
+  }
+}
+
+.faq__item.is-active:hover,
+.faq__item.is-active:focus {
+  color: $color-default-white;
+  background-color: $color-cerulean-blue;
+  border-color: $color-default-white;
+
+  .faq__svg-wrapper {
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+    border-color: $color-default-white;
+  }
+}
+
+.faq__item.is-active:active {
+  background-color: $color-endeavour;
+  border-color: $color-endeavour;
+
+  .faq__svg-wrapper {
+    color: $color-endeavour;
+    background-color: $color-default-white;
+    border-color: $color-default-white;
+  }
+}

@@ -2,7 +2,6 @@
   margin-bottom: 124px;
 
   @include vp-1439 {
-    // margin-bottom: 100px;
     margin-bottom: 103px;
   }
 
@@ -14,7 +13,6 @@
 .news__container {
   display: flex;
   flex-direction: column;
-  // gap: 40px;
 
   h2 {
     margin-top: 5px;
@@ -107,6 +105,13 @@
       font-size: 12px;
       line-height: 12px;
       letter-spacing: 0.24px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    p {
+      opacity: 1;
     }
   }
 }
