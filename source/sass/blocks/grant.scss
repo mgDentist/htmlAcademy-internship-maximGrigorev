@@ -89,7 +89,7 @@
   }
 }
 
-.grant__list-container>p {
+.grant__list-container > p {
   margin-top: 4px;
   margin-bottom: 55px;
   font-size: 32px;
@@ -171,8 +171,6 @@
   line-height: 22px;
   letter-spacing: 0.22px;
   text-transform: uppercase;
-
-  @include vp-1439 {}
 
   @include vp-767 {
     width: 30px;

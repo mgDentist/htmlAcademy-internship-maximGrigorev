@@ -43,7 +43,7 @@
               <a href="#about">О проекте</a>
             </li>
             <li class="nav-list__item nav-list__item--sublisted" data-accordion="element">
-              <a data-accordion="button">Программы
+              <a href="#" data-accordion="button">Программы
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path opacity="0.6" d="M11.455 3.81812L6.00044 8.72721L0.545898 3.81812" stroke="white" />
                 </svg>
@@ -72,7 +72,7 @@
               <a href="#reviews">Отзывы</a>
             </li>
             <li class="nav-list__item nav-list__item--sublisted" data-accordion="element">
-              <a data-accordion="button">Новости
+              <a href="#" data-accordion="button">Новости
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path opacity="0.6" d="M11.455 3.81812L6.00044 8.72721L0.545898 3.81812" stroke="white" />
                 </svg>
@@ -273,7 +273,7 @@
                 предоставляя им инструменты для решения сложных проблем, с которыми сталкиваются в мире. Цель центра —
                 наделить этих
                 людей способностью инициировать значимые изменения.</p>
-              <button class="about__link btn" data-open-modal="modal-main">Подробнее о проекте
+              <button class="about__link btn" type="button" data-open-modal="modal-main">Подробнее о проекте
                 <span class="about__link-svg-wrapper btn__wrapper">
                   <svg width="10" height="10">
                     <use href="__spritemap#sprite-arrow-up"></use>
@@ -338,16 +338,21 @@
                 <div class="programs__item-img-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/programs/women-desktop.webp 1x, img/programs/women-desktop@2x.webp 2x">
+                      srcset="img/programs/women-desktop.webp 1x, img/programs/women-desktop@2x.webp 2x" width="392"
+                      height="420">
                     <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/programs/women-tablet.webp 1x, img/programs/women-tablet@2x.webp 2x">
+                      srcset="img/programs/women-tablet.webp 1x, img/programs/women-tablet@2x.webp 2x" width="324"
+                      height="420">
                     <source type="image/webp"
-                      srcset="img/programs/women-mobile.webp 1x, img/programs/women-mobile@2x.webp 2x">
+                      srcset="img/programs/women-mobile.webp 1x, img/programs/women-mobile@2x.webp 2x" width="290"
+                      height="400">
                     <source type="image/jpeg" media="(min-width: 1440px)"
                       srcset="img/programs/women-desktop.jpg 1x, img/programs/women-desktop@2x.jpg 2x">
                     <source type="image/jpeg" media="(min-width: 768px)"
-                      srcset="img/programs/women-tablet.jpg 1x, img/programs/women-tablet@2x.jpg 2x">
-                    <img src="img/programs/women-mobile.jpg" srcset="img/programs/women-mobile@2x.jpg 2x" alt="">
+                      srcset="img/programs/women-tablet.jpg 1x, img/programs/women-tablet@2x.jpg 2x" width="324"
+                      height="420">
+                    <img src="img/programs/women-mobile.jpg" srcset="img/programs/women-mobile@2x.jpg 2x" width="290"
+                      height="400" alt="">
                   </picture>
                 </div>
                 <div class="programs__item-text-container">
@@ -356,7 +361,7 @@
                   </div>
                   <div class="programs__item-description-container">
                     <p>Получите незаменимый опыт работы в крупнейших мировых компаниях</p>
-                    <a class="programs__link programs__link--little btn" href="#">
+                    <a class="programs__link programs__link--little btn" href="#" aria-label="Перейти к блоку">
                       <div class="programs__link-svg-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="__spritemap#sprite-arrow-up"></use>
@@ -370,16 +375,21 @@
                 <div class="programs__item-img-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/programs/boy-desktop.webp 1x, img/programs/boy-desktop@2x.webp 2x">
+                      srcset="img/programs/boy-desktop.webp 1x, img/programs/boy-desktop@2x.webp 2x" width="392"
+                      height="420">
                     <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/programs/boy-tablet.webp 1x, img/programs/boy-tablet@2x.webp 2x">
+                      srcset="img/programs/boy-tablet.webp 1x, img/programs/boy-tablet@2x.webp 2x" width="324"
+                      height="420">
                     <source type="image/webp"
-                      srcset="img/programs/boy-mobile.webp 1x, img/programs/boy-mobile@2x.webp 2x">
+                      srcset="img/programs/boy-mobile.webp 1x, img/programs/boy-mobile@2x.webp 2x" width="290"
+                      height="400">
                     <source type="image/jpeg" media="(min-width: 1440px)"
                       srcset="img/programs/boy-desktop.jpg 1x, img/programs/boy-desktop@2x.jpg 2x">
                     <source type="image/jpeg" media="(min-width: 768px)"
-                      srcset="img/programs/boy-tablet.jpg 1x, img/programs/boy-tablet@2x.jpg 2x">
-                    <img src="img/programs/boy-mobile.jpg" srcset="img/programs/boy-mobile@2x.jpg 2x" alt="">
+                      srcset="img/programs/boy-tablet.jpg 1x, img/programs/boy-tablet@2x.jpg 2x" width="324"
+                      height="420">
+                    <img src="img/programs/boy-mobile.jpg" srcset="img/programs/boy-mobile@2x.jpg 2x" width="290"
+                      height="400" alt="">
                   </picture>
                 </div>
                 <div class="programs__item-text-container">
@@ -388,7 +398,7 @@
                   </div>
                   <div class="programs__item-description-container">
                     <p>Помогайте другим и развивайте свои лидерские качества.</p>
-                    <a class="programs__link programs__link--little btn" href="#">
+                    <a class="programs__link programs__link--little btn" href="#" aria-label="Перейти к блоку">
                       <div class="programs__link-svg-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="__spritemap#sprite-arrow-up"></use>
@@ -402,16 +412,21 @@
                 <div class="programs__item-img-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/programs/studying-desktop.webp 1x, img/programs/studying-desktop@2x.webp 2x">
+                      srcset="img/programs/studying-desktop.webp 1x, img/programs/studying-desktop@2x.webp 2x"
+                      width="392" height="420">
                     <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/programs/studying-tablet.webp 1x, img/programs/studying-tablet@2x.webp 2x">
+                      srcset="img/programs/studying-tablet.webp 1x, img/programs/studying-tablet@2x.webp 2x" width="324"
+                      height="420">
                     <source type="image/webp"
-                      srcset="img/programs/studying-mobile.webp 1x, img/programs/studying-mobile@2x.webp 2x">
+                      srcset="img/programs/studying-mobile.webp 1x, img/programs/studying-mobile@2x.webp 2x" width="290"
+                      height="400">
                     <source type="image/jpeg" media="(min-width: 1440px)"
                       srcset="img/programs/studying-desktop.jpg 1x, img/programs/studying-desktop@2x.jpg 2x">
                     <source type="image/jpeg" media="(min-width: 768px)"
-                      srcset="img/programs/studying-tablet.jpg 1x, img/programs/studying-tablet@2x.jpg 2x">
-                    <img src="img/programs/studying-mobile.jpg" srcset="img/programs/studying-mobile@2x.jpg 2x" alt="">
+                      srcset="img/programs/studying-tablet.jpg 1x, img/programs/studying-tablet@2x.jpg 2x" width="324"
+                      height="420">
+                    <img src="img/programs/studying-mobile.jpg" srcset="img/programs/studying-mobile@2x.jpg 2x"
+                      width="290" height="400" alt="">
                   </picture>
                 </div>
                 <div class="programs__item-text-container">
@@ -420,7 +435,7 @@
                   </div>
                   <div class="programs__item-description-container">
                     <p>Получите образование и измените своё будущее.</p>
-                    <a class="programs__link programs__link--little btn" href="#">
+                    <a class="programs__link programs__link--little btn" href="#" aria-label="Перейти к блоку">
                       <div class="programs__link-svg-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="__spritemap#sprite-arrow-up"></use>
@@ -434,16 +449,21 @@
                 <div class="programs__item-img-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/programs/women-desktop.webp 1x, img/programs/women-desktop@2x.webp 2x">
+                      srcset="img/programs/women-desktop.webp 1x, img/programs/women-desktop@2x.webp 2x" width="392"
+                      height="420">
                     <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/programs/women-tablet.webp 1x, img/programs/women-tablet@2x.webp 2x">
+                      srcset="img/programs/women-tablet.webp 1x, img/programs/women-tablet@2x.webp 2x" width="324"
+                      height="420">
                     <source type="image/webp"
-                      srcset="img/programs/women-mobile.webp 1x, img/programs/women-mobile@2x.webp 2x">
+                      srcset="img/programs/women-mobile.webp 1x, img/programs/women-mobile@2x.webp 2x" width="290"
+                      height="400">
                     <source type="image/jpeg" media="(min-width: 1440px)"
                       srcset="img/programs/women-desktop.jpg 1x, img/programs/women-desktop@2x.jpg 2x">
                     <source type="image/jpeg" media="(min-width: 768px)"
-                      srcset="img/programs/women-tablet.jpg 1x, img/programs/women-tablet@2x.jpg 2x">
-                    <img src="img/programs/women-mobile.jpg" srcset="img/programs/women-mobile@2x.jpg 2x" alt="">
+                      srcset="img/programs/women-tablet.jpg 1x, img/programs/women-tablet@2x.jpg 2x" width="324"
+                      height="420">
+                    <img src="img/programs/women-mobile.jpg" srcset="img/programs/women-mobile@2x.jpg 2x" width="290"
+                      height="400" alt="">
                   </picture>
                 </div>
                 <div class="programs__item-text-container">
@@ -453,7 +473,7 @@
                   <div class="programs__item-description-container">
                     <p>Религия Религия Религия Религия Религия Религия
                     </p>
-                    <a class="programs__link programs__link--little btn" href="#">
+                    <a class="programs__link programs__link--little btn" href="#" aria-label="Перейти к блоку">
                       <div class="programs__link-svg-wrapper btn__wrapper">
                         <svg width="10" height="10">
                           <use href="__spritemap#sprite-arrow-up"></use>
@@ -471,7 +491,7 @@
 
             <div class="programs__buttons-container">
               <button class="programs__slider-button swiper-button-prev" type="button"
-                data-slider="programs-slider-btn-prev">
+                data-slider="programs-slider-btn-prev" aria-label="Предыдущий слайд">
                 <span class="programs__link-btn-svg-wrapper">
                   <svg width="10" height="10">
                     <use href="__spritemap#sprite-arrow-left"></use>
@@ -480,7 +500,7 @@
               </button>
 
               <button class="programs__slider-button swiper-button-next" type="button"
-                data-slider="programs-slider-btn-next">
+                data-slider="programs-slider-btn-next" aria-label="Следующий слайд">
                 <span class="programs__link-btn-svg-wrapper">
                   <svg width="10" height="10">
                     <use href="__spritemap#sprite-arrow-right"></use>
@@ -568,16 +588,22 @@
                 <div class="news__img-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/news/persons-desktop.webp 1x, img/news/persons-desktop@2x.webp 2x">
+                      srcset="img/news/persons-desktop.webp 1x, img/news/persons-desktop@2x.webp 2x" width="604"
+                      height="400">
                     <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/news/persons-tablet.webp 1x, img/news/persons-tablet@2x.webp 2x">
+                      srcset="img/news/persons-tablet.webp 1x, img/news/persons-tablet@2x.webp 2x" width="324"
+                      height="350">
                     <source type="image/webp"
-                      srcset="img/news/persons-mobile.webp 1x, img/news/persons-mobile@2x.webp 2x">
+                      srcset="img/news/persons-mobile.webp 1x, img/news/persons-mobile@2x.webp 2x" width="290"
+                      height="330">
                     <source type="image/jpeg" media="(min-width: 1440px)"
-                      srcset="img/news/persons-desktop.jpg 1x, img/news/persons-desktop@2x.jpg 2x">
+                      srcset="img/news/persons-desktop.jpg 1x, img/news/persons-desktop@2x.jpg 2x" width="604"
+                      height="400">
                     <source type="image/jpeg" media="(min-width: 768px)"
-                      srcset="img/news/persons-tablet.jpg 1x, img/news/persons-tablet@2x.jpg 2x">
-                    <img src="img/news/persons-mobile.jpg" srcset="img/news/persons-mobile@2x.jpg 2x" alt="">
+                      srcset="img/news/persons-tablet.jpg 1x, img/news/persons-tablet@2x.jpg 2x" width="324"
+                      height="350">
+                    <img src="img/news/persons-mobile.jpg" srcset="img/news/persons-mobile@2x.jpg 2x" width="290"
+                      height="330" alt="">
                   </picture>
                 </div>
 
@@ -585,7 +611,7 @@
                 <h3>Интервью с участницей программы стажировки</h3>
                 <div class="news__link-container">
                   <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
-                  <a class="news__link news__link--little btn" href="#">
+                  <a class="news__link news__link--little btn" href="#" aria-label="Перейти к материалу">
                     <div class="news__link-svg-wrapper btn__wrapper">
                       <svg width="10" height="10">
                         <use href="__spritemap#sprite-arrow-up"></use>
@@ -599,15 +625,17 @@
                 <div class="news__img-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/news/sea-desktop.webp 1x, img/news/sea-desktop@2x.webp 2x">
+                      srcset="img/news/sea-desktop.webp 1x, img/news/sea-desktop@2x.webp 2x" width="286" height="400">
                     <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/news/sea-tablet.webp 1x, img/news/sea-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/news/sea-mobile.webp 1x, img/news/sea-mobile@2x.webp 2x">
+                      srcset="img/news/sea-tablet.webp 1x, img/news/sea-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="img/news/sea-mobile.webp 1x, img/news/sea-mobile@2x.webp 2x"
+                      width="290" height="240">
                     <source type="image/jpeg" media="(min-width: 1440px)"
-                      srcset="img/news/sea-desktop.jpg 1x, img/news/sea-desktop@2x.jpg 2x">
+                      srcset="img/news/sea-desktop.jpg 1x, img/news/sea-desktop@2x.jpg 2x" width="286" height="400">
                     <source type="image/jpeg" media="(min-width: 768px)"
-                      srcset="img/news/sea-tablet.jpg 1x, img/news/sea-tablet@2x.jpg 2x">
-                    <img src="img/news/sea-mobile.jpg" srcset="img/news/sea-mobile@2x.jpg 2x" alt="">
+                      srcset="img/news/sea-tablet.jpg 1x, img/news/sea-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="img/news/sea-mobile.jpg" srcset="img/news/sea-mobile@2x.jpg 2x" width="290" height="240"
+                      alt="">
                   </picture>
                 </div>
 
@@ -615,7 +643,7 @@
                 <h3>Путешествуем по миру</h3>
                 <div class="news__link-container">
                   <p>Какие места посещают наши студенты весной</p>
-                  <a class="news__link news__link--little btn" href="#">
+                  <a class="news__link news__link--little btn" href="#" aria-label="Перейти к материалу">
                     <div class="news__link-svg-wrapper btn__wrapper">
                       <svg width="10" height="10">
                         <use href="__spritemap#sprite-arrow-up"></use>
@@ -629,16 +657,22 @@
                 <div class="news__img-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/news/volunteer-desktop.webp 1x, img/news/volunteer-desktop@2x.webp 2x">
+                      srcset="img/news/volunteer-desktop.webp 1x, img/news/volunteer-desktop@2x.webp 2x" width="286"
+                      height="400">
                     <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/news/volunteer-tablet.webp 1x, img/news/volunteer-tablet@2x.webp 2x">
+                      srcset="img/news/volunteer-tablet.webp 1x, img/news/volunteer-tablet@2x.webp 2x" width="324"
+                      height="350">
                     <source type="image/webp"
-                      srcset="img/news/volunteer-mobile.webp 1x, img/news/volunteer-mobile@2x.webp 2x">
+                      srcset="img/news/volunteer-mobile.webp 1x, img/news/volunteer-mobile@2x.webp 2x" width="290"
+                      height="240">
                     <source type="image/jpeg" media="(min-width: 1440px)"
-                      srcset="img/news/volunteer-desktop.jpg 1x, img/news/volunteer-desktop@2x.jpg 2x">
+                      srcset="img/news/volunteer-desktop.jpg 1x, img/news/volunteer-desktop@2x.jpg 2x" width="286"
+                      height="400">
                     <source type="image/jpeg" media="(min-width: 768px)"
-                      srcset="img/news/volunteer-tablet.jpg 1x, img/news/volunteer-tablet@2x.jpg 2x">
-                    <img src="img/news/volunteer-mobile.jpg" srcset="img/news/volunteer-mobile@2x.jpg 2x" alt="">
+                      srcset="img/news/volunteer-tablet.jpg 1x, img/news/volunteer-tablet@2x.jpg 2x" width="324"
+                      height="350">
+                    <img src="img/news/volunteer-mobile.jpg" srcset="img/news/volunteer-mobile@2x.jpg 2x" width="290"
+                      height="240" alt="">
                   </picture>
                 </div>
 
@@ -646,7 +680,7 @@
                 <h3>Новая программа волонтёрства</h3>
                 <div class="news__link-container">
                   <p>Программа помощи детям длительностью 4 месяца</p>
-                  <a class="news__link news__link--little btn" href="#">
+                  <a class="news__link news__link--little btn" href="#" aria-label="Перейти к материалу">
                     <div class="news__link-svg-wrapper btn__wrapper">
                       <svg width="10" height="10">
                         <use href="__spritemap#sprite-arrow-up"></use>
@@ -660,16 +694,22 @@
                 <div class="news__img-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/news/computers-desktop.webp 1x, img/news/computers-desktop@2x.webp 2x">
+                      srcset="img/news/computers-desktop.webp 1x, img/news/computers-desktop@2x.webp 2x" width="286"
+                      height="400">
                     <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/news/computers-tablet.webp 1x, img/news/computers-tablet@2x.webp 2x">
+                      srcset="img/news/computers-tablet.webp 1x, img/news/computers-tablet@2x.webp 2x" width="324"
+                      height="350">
                     <source type="image/webp"
-                      srcset="img/news/computers-mobile.webp 1x, img/news/computers-mobile@2x.webp 2x">
+                      srcset="img/news/computers-mobile.webp 1x, img/news/computers-mobile@2x.webp 2x" width="290"
+                      height="240">
                     <source type="image/jpeg" media="(min-width: 1440px)"
-                      srcset="img/news/computers-desktop.jpg 1x, img/news/computers-desktop@2x.jpg 2x">
+                      srcset="img/news/computers-desktop.jpg 1x, img/news/computers-desktop@2x.jpg 2x" width="286"
+                      height="400">
                     <source type="image/jpeg" media="(min-width: 768px)"
-                      srcset="img/news/computers-tablet.jpg 1x, img/news/computers-tablet@2x.jpg 2x">
-                    <img src="img/news/computers-mobile.jpg" srcset="img/news/computers-mobile@2x.jpg 2x" alt="">
+                      srcset="img/news/computers-tablet.jpg 1x, img/news/computers-tablet@2x.jpg 2x" width="324"
+                      height="350">
+                    <img src="img/news/computers-mobile.jpg" srcset="img/news/computers-mobile@2x.jpg 2x" width="290"
+                      height="240" alt="">
                   </picture>
                 </div>
 
@@ -677,7 +717,7 @@
                 <h3>Построй свою карьеру</h3>
                 <div class="news__link-container">
                   <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                  <a class="news__link news__link--little btn" href="#">
+                  <a class="news__link news__link--little btn" href="#" aria-label="Перейти к материалу">
                     <div class="news__link-svg-wrapper btn__wrapper">
                       <svg width="10" height="10">
                         <use href="__spritemap#sprite-arrow-up"></use>
@@ -691,15 +731,17 @@
                 <div class="news__img-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/news/sea-desktop.webp 1x, img/news/sea-desktop@2x.webp 2x">
+                      srcset="img/news/sea-desktop.webp 1x, img/news/sea-desktop@2x.webp 2x" width="286" height="400">
                     <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/news/sea-tablet.webp 1x, img/news/sea-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/news/sea-mobile.webp 1x, img/news/persons-mobile@2x.webp 2x">
+                      srcset="img/news/sea-tablet.webp 1x, img/news/sea-tablet@2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="img/news/sea-mobile.webp 1x, img/news/persons-mobile@2x.webp 2x"
+                      width="290" height="240">
                     <source type="image/jpeg" media="(min-width: 1440px)"
-                      srcset="img/news/sea-desktop.jpg 1x, img/news/sea-desktop@2x.jpg 2x">
+                      srcset="img/news/sea-desktop.jpg 1x, img/news/sea-desktop@2x.jpg 2x" width="286" height="400">
                     <source type="image/jpeg" media="(min-width: 768px)"
-                      srcset="img/news/sea-tablet.jpg 1x, img/news/sea-tablet@2x.jpg 2x">
-                    <img src="img/news/sea-mobile.jpg" srcset="img/news/sea-mobile@2x.jpg 2x" alt="">
+                      srcset="img/news/sea-tablet.jpg 1x, img/news/sea-tablet@2x.jpg 2x" width="324" height="350">
+                    <img src="img/news/sea-mobile.jpg" srcset="img/news/sea-mobile@2x.jpg 2x" width="290" height="240"
+                      alt="">
                   </picture>
                 </div>
 
@@ -707,7 +749,7 @@
                 <h3>Путешествуем по миру</h3>
                 <div class="news__link-container">
                   <p>Какие места посещают наши студенты весной</p>
-                  <a class="news__link news__link--little btn" href="#">
+                  <a class="news__link news__link--little btn" href="#" aria-label="Перейти к материалу">
                     <div class="news__link-svg-wrapper btn__wrapper">
                       <svg width="10" height="10">
                         <use href="__spritemap#sprite-arrow-up"></use>
@@ -721,16 +763,22 @@
                 <div class="news__img-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/news/volunteer-desktop.webp 1x, img/news/volunteer-desktop@2x.webp 2x">
+                      srcset="img/news/volunteer-desktop.webp 1x, img/news/volunteer-desktop@2x.webp 2x" width="286"
+                      height="400">
                     <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/news/volunteer-tablet.webp 1x, img/news/volunteer-tablet@2x.webp 2x">
+                      srcset="img/news/volunteer-tablet.webp 1x, img/news/volunteer-tablet@2x.webp 2x" width="324"
+                      height="350">
                     <source type="image/webp"
-                      srcset="img/news/volunteer-mobile.webp 1x, img/news/volunteer-mobile@2x.webp 2x">
+                      srcset="img/news/volunteer-mobile.webp 1x, img/news/volunteer-mobile@2x.webp 2x" width="290"
+                      height="240">
                     <source type="image/jpeg" media="(min-width: 1440px)"
-                      srcset="img/news/volunteer-desktop.jpg 1x, img/news/volunteer-desktop@2x.jpg 2x">
+                      srcset="img/news/volunteer-desktop.jpg 1x, img/news/volunteer-desktop@2x.jpg 2x" width="286"
+                      height="400">
                     <source type="image/jpeg" media="(min-width: 768px)"
-                      srcset="img/news/volunteer-tablet.jpg 1x, img/news/volunteer-tablet@2x.jpg 2x">
-                    <img src="img/news/volunteer-mobile.jpg" srcset="img/news/volunteer-mobile@2x.jpg 2x" alt="">
+                      srcset="img/news/volunteer-tablet.jpg 1x, img/news/volunteer-tablet@2x.jpg 2x" width="324"
+                      height="350">
+                    <img src="img/news/volunteer-mobile.jpg" srcset="img/news/volunteer-mobile@2x.jpg 2x" width="290"
+                      height="240" alt="">
                   </picture>
                 </div>
 
@@ -738,7 +786,7 @@
                 <h3>Новая программа волонтёрства</h3>
                 <div class="news__link-container">
                   <p>Программа помощи детямдлительностью 4 месяца</p>
-                  <a class="news__link news__link--little btn" href="#">
+                  <a class="news__link news__link--little btn" href="#" aria-label="Перейти к материалу">
                     <div class="news__link-svg-wrapper btn__wrapper">
                       <svg width="10" height="10">
                         <use href="__spritemap#sprite-arrow-up"></use>
@@ -752,16 +800,22 @@
                 <div class="news__img-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/news/computers-desktop.webp 1x, img/news/computers-desktop@2x.webp 2x">
+                      srcset="img/news/computers-desktop.webp 1x, img/news/computers-desktop@2x.webp 2x" width="286"
+                      height="400">
                     <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/news/computers-tablet.webp 1x, img/news/computers-tablet@2x.webp 2x">
+                      srcset="img/news/computers-tablet.webp 1x, img/news/computers-tablet@2x.webp 2x" width="324"
+                      height="350">
                     <source type="image/webp"
-                      srcset="img/news/computers-mobile.webp 1x, img/news/computers-mobile@2x.webp 2x">
+                      srcset="img/news/computers-mobile.webp 1x, img/news/computers-mobile@2x.webp 2x" width="290"
+                      height="240">
                     <source type="image/jpeg" media="(min-width: 1440px)"
-                      srcset="img/news/computers-desktop.jpg 1x, img/news/computers-desktop@2x.jpg 2x">
+                      srcset="img/news/computers-desktop.jpg 1x, img/news/computers-desktop@2x.jpg 2x" width="286"
+                      height="400">
                     <source type="image/jpeg" media="(min-width: 768px)"
-                      srcset="img/news/computers-tablet.jpg 1x, img/news/computers-tablet@2x.jpg 2x">
-                    <img src="img/news/computers-mobile.jpg" srcset="img/news/computers-mobile@2x.jpg 2x" alt="">
+                      srcset="img/news/computers-tablet.jpg 1x, img/news/computers-tablet@2x.jpg 2x" width="324"
+                      height="350">
+                    <img src="img/news/computers-mobile.jpg" srcset="img/news/computers-mobile@2x.jpg 2x" width="290"
+                      height="240" alt="">
                   </picture>
                 </div>
 
@@ -769,7 +823,7 @@
                 <h3>Построй свою карьеру</h3>
                 <div class="news__link-container">
                   <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                  <a class="news__link news__link--little btn" href="#">
+                  <a class="news__link news__link--little btn" href="#" aria-label="Перейти к материалу">
                     <div class="news__link-svg-wrapper btn__wrapper">
                       <svg width="10" height="10">
                         <use href="__spritemap#sprite-arrow-up"></use>
@@ -783,16 +837,22 @@
                 <div class="news__img-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/news/computers-desktop.webp 1x, img/news/computers-desktop@2x.webp 2x">
+                      srcset="img/news/computers-desktop.webp 1x, img/news/computers-desktop@2x.webp 2x" width="286"
+                      height="400">
                     <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/news/computers-tablet.webp 1x, img/news/computers-tablet@2x.webp 2x">
+                      srcset="img/news/computers-tablet.webp 1x, img/news/computers-tablet@2x.webp 2x" width="324"
+                      height="350">
                     <source type="image/webp"
-                      srcset="img/news/computers-mobile.webp 1x, img/news/computers-mobile@2x.webp 2x">
+                      srcset="img/news/computers-mobile.webp 1x, img/news/computers-mobile@2x.webp 2x" width="290"
+                      height="240">
                     <source type="image/jpeg" media="(min-width: 1440px)"
-                      srcset="img/news/computers-desktop.jpg 1x, img/news/computers-desktop@2x.jpg 2x">
+                      srcset="img/news/computers-desktop.jpg 1x, img/news/computers-desktop@2x.jpg 2x" width="286"
+                      height="400">
                     <source type="image/jpeg" media="(min-width: 768px)"
-                      srcset="img/news/computers-tablet.jpg 1x, img/news/computers-tablet@2x.jpg 2x">
-                    <img src="img/news/computers-mobile.jpg" srcset="img/news/computers-mobile@2x.jpg 2x" alt="">
+                      srcset="img/news/computers-tablet.jpg 1x, img/news/computers-tablet@2x.jpg 2x" width="324"
+                      height="350">
+                    <img src="img/news/computers-mobile.jpg" srcset="img/news/computers-mobile@2x.jpg 2x" width="290"
+                      height="240" alt="">
                   </picture>
                 </div>
 
@@ -800,7 +860,7 @@
                 <h3>Построй свою карьеру</h3>
                 <div class="news__link-container">
                   <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                  <a class="news__link news__link--little btn" href="#">
+                  <a class="news__link news__link--little btn" href="#" aria-label="Перейти к материалу">
                     <div class="news__link-svg-wrapper btn__wrapper">
                       <svg width="10" height="10">
                         <use href="__spritemap#sprite-arrow-up"></use>
@@ -814,16 +874,22 @@
                 <div class="news__img-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
-                      srcset="img/news/computers-desktop.webp 1x, img/news/computers-desktop@2x.webp 2x">
+                      srcset="img/news/computers-desktop.webp 1x, img/news/computers-desktop@2x.webp 2x" width="286"
+                      height="400">
                     <source type="image/webp" media="(min-width: 768px)"
-                      srcset="img/news/computers-tablet.webp 1x, img/news/computers-tablet@2x.webp 2x">
+                      srcset="img/news/computers-tablet.webp 1x, img/news/computers-tablet@2x.webp 2x" width="324"
+                      height="350">
                     <source type="image/webp"
-                      srcset="img/news/computers-mobile.webp 1x, img/news/computers-mobile@2x.webp 2x">
+                      srcset="img/news/computers-mobile.webp 1x, img/news/computers-mobile@2x.webp 2x" width="290"
+                      height="240">
                     <source type="image/jpeg" media="(min-width: 1440px)"
-                      srcset="img/news/computers-desktop.jpg 1x, img/news/computers-desktop@2x.jpg 2x">
+                      srcset="img/news/computers-desktop.jpg 1x, img/news/computers-desktop@2x.jpg 2x" width="286"
+                      height="400">
                     <source type="image/jpeg" media="(min-width: 768px)"
-                      srcset="img/news/computers-tablet.jpg 1x, img/news/computers-tablet@2x.jpg 2x">
-                    <img src="img/news/computers-mobile.jpg" srcset="img/news/computers-mobile@2x.jpg 2x" alt="">
+                      srcset="img/news/computers-tablet.jpg 1x, img/news/computers-tablet@2x.jpg 2x" width="324"
+                      height="350">
+                    <img src="img/news/computers-mobile.jpg" srcset="img/news/computers-mobile@2x.jpg 2x" width="290"
+                      height="240" alt="">
                   </picture>
                 </div>
 
@@ -831,7 +897,7 @@
                 <h3>Построй свою карьеру</h3>
                 <div class="news__link-container">
                   <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                  <a class="news__link news__link--little btn" href="#">
+                  <a class="news__link news__link--little btn" href="#" aria-label="Перейти к материалу">
                     <div class="news__link-svg-wrapper btn__wrapper">
                       <svg width="10" height="10">
                         <use href="__spritemap#sprite-arrow-up"></use>
@@ -845,7 +911,8 @@
             <div class="swiper-pagination news__slider-pagination" data-slider="news-slider-pgn"></div>
 
             <div class="news__buttons-container">
-              <button class="news__slider-button swiper-button-prev" type="button" data-slider="news-slider-btn-prev">
+              <button class="news__slider-button swiper-button-prev" type="button" data-slider="news-slider-btn-prev"
+                aria-label="Предыдущий слайд">
                 <span class="news__link-btn-svg-wrapper">
                   <svg width="10" height="10">
                     <use href="__spritemap#sprite-arrow-left"></use>
@@ -853,7 +920,8 @@
                 </span>
               </button>
 
-              <button class="news__slider-button swiper-button-next" type="button" data-slider="news-slider-btn-next">
+              <button class="news__slider-button swiper-button-next" type="button" data-slider="news-slider-btn-next"
+                aria-label="Следующий слайд">
                 <span class="news__link-btn-svg-wrapper">
                   <svg width="10" height="10">
                     <use href="__spritemap#sprite-arrow-right"></use>
@@ -1160,7 +1228,7 @@
             <div class="swiper-scrollbar reviews__slider-scrollbar" data-slider="reviews-scrollbar"></div>
             <div class="reviews__buttons-container">
               <button class="reviews__slider-button swiper-button-prev" type="button"
-                data-slider="reviews-slider-btn-prev">
+                data-slider="reviews-slider-btn-prev" aria-label="Предыдущий слайд">
                 <span class="reviews__btn-svg-wrapper">
                   <svg width="10" height="10">
                     <use href="__spritemap#sprite-arrow-left"></use>
@@ -1169,7 +1237,7 @@
               </button>
 
               <button class="reviews__slider-button swiper-button-next" type="button"
-                data-slider="reviews-slider-btn-next">
+                data-slider="reviews-slider-btn-next" aria-label="Следующий слайд">
                 <span class="reviews__btn-svg-wrapper">
                   <svg width="10" height="10">
                     <use href="__spritemap#sprite-arrow-right"></use>
@@ -1211,15 +1279,17 @@
           <div class="contacts__img-container">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)"
-                srcset="img/contacts/map-desktop.webp 1x, img/contacts/map-desktop@2x.webp 2x">
+                srcset="img/contacts/map-desktop.webp 1x, img/contacts/map-desktop@2x.webp 2x" width="1240"
+                height="500">
               <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/contacts/map-tablet.webp 1x, img/contacts/map-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/contacts/map-mobile.webp 1x, img/contacts/map-mobile@2x.webp 2x">
+                srcset="img/contacts/map-tablet.webp 1x, img/contacts/map-tablet@2x.webp 2x" width="1064" height="500">
+              <source type="image/webp" srcset="img/contacts/map-mobile.webp 1x, img/contacts/map-mobile@2x.webp 2x"
+                width="512" height="240">
               <source type="image/jpeg" media="(min-width: 1440px)"
-                srcset="img/contacts/map-desktop.jpg 1x, img/contacts/map-desktop@2x.jpg 2x">
+                srcset="img/contacts/map-desktop.jpg 1x, img/contacts/map-desktop@2x.jpg 2x" width="1240" height="500">
               <source type="image/jpeg" media="(min-width: 768px)"
-                srcset="img/contacts/map-tablet.jpg 1x, img/contacts/map-tablet@2x.jpg 2x">
-              <img src="img/contacts/map-mobile.jpg" srcset="img/contacts/map-mobile@2x.jpg 2x"
+                srcset="img/contacts/map-tablet.jpg 1x, img/contacts/map-tablet@2x.jpg 2x" width="1064" height="500">
+              <img src="img/contacts/map-mobile.jpg" srcset="img/contacts/map-mobile@2x.jpg 2x" width="512" height="240"
                 alt="Карта с адресом организации: г. Новосибирск, ул. Щетинкина 68, культурный центр">
             </picture>
           </div>
@@ -1231,15 +1301,20 @@
           <div class="feedback__img-container">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)"
-                srcset="img/feedback/city-desktop.webp 1x, img/feedback/city-desktop@2x.webp 2x">
+                srcset="img/feedback/city-desktop.webp 1x, img/feedback/city-desktop@2x.webp 2x" width="1240"
+                height="803">
               <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/feedback/city-tablet.webp 1x, img/feedback/city-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/feedback/city-mobile.webp 1x, img/feedback/city-mobile@2x.webp 2x">
+                srcset="img/feedback/city-tablet.webp 1x, img/feedback/city-tablet@2x.webp 2x" width="1168"
+                height="780">
+              <source type="image/webp" srcset="img/feedback/city-mobile.webp 1x, img/feedback/city-mobile@2x.webp 2x"
+                width="768" height="753">
               <source type="image/jpeg" media="(min-width: 1440px)"
-                srcset="img/feedback/city-desktop.jpg 1x, img/feedback/city-desktop@2x.jpg 2x">
+                srcset="img/feedback/city-desktop.jpg 1x, img/feedback/city-desktop@2x.jpg 2x" width="1240"
+                height="803">
               <source type="image/jpeg" media="(min-width: 768px)"
-                srcset="img/feedback/city-tablet.jpg 1x, img/feedback/city-tablet@2x.jpg 2x">
-              <img src="img/feedback/city-mobile.jpg" srcset="img/feedback/city-mobile@2x.jpg 2x" alt="">
+                srcset="img/feedback/city-tablet.jpg 1x, img/feedback/city-tablet@2x.jpg 2x" width="1168" height="780">
+              <img src="img/feedback/city-mobile.jpg" srcset="img/feedback/city-mobile@2x.jpg 2x" width="768"
+                height="753" alt="">
             </picture>
           </div>
           <div class="feedback__text-block-container">
@@ -1270,12 +1345,12 @@
 
                   <div class="feedback__form-label feedback__form-label--textarea" data-validate-type="text"
                     data-on-input-validate="data-on-input-validate" data-required="data-required">
-                    <label>
+                    <div>
                       <span>
                         Ваше сообщение
                       </span>
                       <textarea name="message" required></textarea>
-                    </label>
+                    </div>
                   </div>
 
                   <div class="custom-select feedback__form-select feedback__form-label" data-select="data-select"
@@ -1298,7 +1373,7 @@
                   </div>
 
                   <div class="feedback__form-label feedback__form-label--checkbox" data-validate-type="checkbox"
-                    data-message-base="">
+                    data-message-base="Ошибка">
                     <label>
                       <input class="visually-hidden feedback__default-checkbox" type="checkbox" name="agree" id="agree">
                       <span class="feedback__custom-checkbox">
@@ -1370,17 +1445,17 @@
         </div>
 
         <div class="footer__socials">
-          <a href="#">
+          <a href="#" aria-label="Мы в Вконтакте">
             <svg width="16" height="16">
               <use href="__spritemap#sprite-vk"></use>
             </svg>
           </a>
-          <a href="#">
+          <a href="#" aria-label="Мы в Одноклассники">
             <svg width="16" height="16">
               <use href="__spritemap#sprite-odnoklassniki"></use>
             </svg>
           </a>
-          <a href="#">
+          <a href="#" aria-label="Мы на Реддит">
             <svg width="16" height="16">
               <use href="__spritemap#sprite-reddit"></use>
             </svg>
@@ -1456,7 +1531,7 @@
             </div>
 
             <div class="modal__form-label modal__form-label--checkbox" data-validate-type="checkbox"
-              data-message-base="">
+              data-message-base="Ошибка">
               <label>
                 <input class="visually-hidden modal__default-checkbox" type="checkbox" name="agree">
                 <span class="modal__custom-checkbox">

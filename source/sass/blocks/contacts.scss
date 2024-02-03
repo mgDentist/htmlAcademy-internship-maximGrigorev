@@ -78,7 +78,6 @@
 }
 
 .contacts__item {
-
   &:last-child {
     margin-left: 27px;
 
@@ -155,8 +154,6 @@
     object-fit: cover;
     object-position: center;
     border-radius: 16px;
-
-    @include vp-1439 {}
 
     @include vp-767 {
       height: 240px;
