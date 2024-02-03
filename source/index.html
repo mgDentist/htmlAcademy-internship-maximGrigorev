@@ -40,10 +40,10 @@
         <nav class="header__nav" data-element="header-nav">
           <ul class="header__nav-list nav-list" data-accordion="parent">
             <li class="nav-list__item">
-              <a href="#">О проекте</a>
+              <a href="#about">О проекте</a>
             </li>
             <li class="nav-list__item nav-list__item--sublisted" data-accordion="element">
-              <a href="#" data-accordion="button">Программы
+              <a data-accordion="button">Программы
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path opacity="0.6" d="M11.455 3.81812L6.00044 8.72721L0.545898 3.81812" stroke="white" />
                 </svg>
@@ -51,28 +51,28 @@
 
               <ul class="nav-list__sublist" data-accordion="content">
                 <li class="nav-list__sublist-item">
-                  <a href="#">Стажировки</a>
+                  <a href="#internship">Стажировки</a>
                 </li>
                 <li class="nav-list__sublist-item">
-                  <a href="#">Волотнерство</a>
+                  <a href="#volunteer">Волотнерство</a>
                 </li>
                 <li class="nav-list__sublist-item">
-                  <a href="#">Учеба</a>
+                  <a href="#education">Учеба</a>
                 </li>
                 <li class="nav-list__sublist-item">
-                  <a href="#">Религия</a>
+                  <a href="#religion">Религия</a>
                 </li>
               </ul>
 
             </li>
             <li class="nav-list__item">
-              <a href="#">Как поехать</a>
+              <a href="#grant">Как поехать</a>
             </li>
             <li class="nav-list__item">
-              <a href="#">Отзывы</a>
+              <a href="#reviews">Отзывы</a>
             </li>
             <li class="nav-list__item nav-list__item--sublisted" data-accordion="element">
-              <a href="#" data-accordion="button">Новости
+              <a data-accordion="button">Новости
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path opacity="0.6" d="M11.455 3.81812L6.00044 8.72721L0.545898 3.81812" stroke="white" />
                 </svg>
@@ -80,24 +80,24 @@
 
               <ul class="nav-list__sublist" data-accordion="content">
                 <li class="nav-list__sublist-item">
-                  <a href="#">Общее</a>
+                  <a href="#news-common">Общее</a>
                 </li>
                 <li class="nav-list__sublist-item">
-                  <a href="#">Волотнерство</a>
+                  <a href="#news-volunteer">Волотнерство</a>
                 </li>
                 <li class="nav-list__sublist-item">
-                  <a href="#">Стажировки</a>
+                  <a href="#news-internship">Стажировки</a>
                 </li>
                 <li class="nav-list__sublist-item">
-                  <a href="#">Карьера</a>
+                  <a href="#news-career">Карьера</a>
                 </li>
                 <li class="nav-list__sublist-item">
-                  <a href="#">Путешествия</a>
+                  <a href="#news-travel">Путешествия</a>
                 </li>
               </ul>
             </li>
             <li class="nav-list__item">
-              <a href="#">Контакты</a>
+              <a href="#contacts">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -258,7 +258,7 @@
         </section>
       </div>
 
-      <section class="about" data-test="about">
+      <section class="about" data-test="about" id="about">
         <div class="container about__container">
           <div class="about__text-block-wrapper">
             <div class="about__proj-wrapper">
@@ -334,7 +334,7 @@
         <div class="programs__slider-container">
           <div class="programs__slider swiper" data-slider="programs-slider">
             <ul class="programs__list swiper-wrapper">
-              <li class="programs__item swiper-slide">
+              <li class="programs__item swiper-slide" id="internship">
                 <div class="programs__item-img-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
@@ -371,7 +371,7 @@
                   </div>
                 </div>
               </li>
-              <li class="programs__item swiper-slide">
+              <li class="programs__item swiper-slide" id="volunteer">
                 <div class="programs__item-img-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
@@ -404,7 +404,7 @@
                   </div>
                 </div>
               </li>
-              <li class="programs__item swiper-slide">
+              <li class="programs__item swiper-slide" id="education">
                 <div class="programs__item-img-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
@@ -442,7 +442,7 @@
                   </div>
                 </div>
               </li>
-              <li class="programs__item swiper-slide">
+              <li class="programs__item swiper-slide" id="religion">
                 <div class="programs__item-img-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
@@ -484,7 +484,6 @@
           </div>
           <div class="container programs__buttons-slider-container">
 
-            <!-- <div class="swiper-pagination programs__slider-pagination" data-slider="programs-slider-pgn"></div> -->
             <div class="swiper-scrollbar programs__slider-scrollbar" data-slider="programs-scrollbar"></div>
 
             <div class="programs__buttons-container">
@@ -510,7 +509,7 @@
         </div>
       </section>
 
-      <section class="grant" data-test="grant">
+      <section class="grant" data-test="grant" id="grant">
         <div class="container grant__container">
           <div class="grant__content-container">
             <h2>Как поехать</h2>
@@ -563,19 +562,19 @@
           <h2>Новости и материалы</h2>
           <div class="news__tab-list-container">
             <ul class="news__tab-list" data-news="news-titles">
-              <li class="news__tab-item is-active" data-news="news-title">
+              <li class="news__tab-item is-active" data-news="news-title" id="news-common">
                 <p>Общее</p>
               </li>
-              <li class="news__tab-item" data-news="news-title">
+              <li class="news__tab-item" data-news="news-title" id="news-volunteer">
                 <p>Волонтёрство</p>
               </li>
-              <li class="news__tab-item" data-news="news-title">
+              <li class="news__tab-item" data-news="news-title" id="news-internship">
                 <p>Стажировки</p>
               </li>
-              <li class="news__tab-item" data-news="news-title">
+              <li class="news__tab-item" data-news="news-title" id="news-career">
                 <p>Карьера</p>
               </li>
-              <li class="news__tab-item" data-news="news-title">
+              <li class="news__tab-item" data-news="news-title" id="news-travel">
                 <p>Путешествия</p>
               </li>
             </ul>
@@ -1068,7 +1067,7 @@
         </div>
       </section>
 
-      <section class="reviews" data-test="reviews">
+      <section class="reviews" data-test="reviews" id="reviews">
         <div class="container reviews__container">
           <h2>Отзывы</h2>
         </div>
@@ -1235,7 +1234,7 @@
 
       </section>
 
-      <section class="contacts" data-test="contacts">
+      <section class="contacts" data-test="contacts" id="contacts">
         <div class="container contacts__container">
           <div class="contacts__text-container">
             <h2>Контакты</h2>
