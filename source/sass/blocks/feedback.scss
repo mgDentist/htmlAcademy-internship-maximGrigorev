@@ -346,6 +346,10 @@
     flex-direction: column;
     gap: 10px;
   }
+
+  label {
+    margin-bottom: 0;
+  }
 }
 
 .feedback__custom-checkbox {

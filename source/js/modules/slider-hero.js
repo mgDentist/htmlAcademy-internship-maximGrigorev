@@ -19,9 +19,9 @@ const initHeroSlider = () => {
           this.pagination.update();
         }
       },
-      // autoplay: {
-      //   delay: 3000,
-      // },
+      autoplay: {
+        delay: 3000,
+      },
       autoHeight: true,
       loop: true,
       breakpoints: {
