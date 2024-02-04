@@ -17,11 +17,26 @@ const initNewsSlider = () => {
       pagination: {
         el: newsPagination,
         clickable: true,
+        dynamicBullets: true,
+        dynamicMainBullets: 4,
         renderBullet: function (index, className) {
           return `<span class="${className}">${index + 1}</span>`;
         },
       },
       breakpoints: {
+        1440: {
+          slidesPerView: 'auto',
+          slidesPerGroup: 2,
+          spaceBetween: 32,
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 1,
+          spaceBetween: 30,
+          grid: {
+            rows: 2,
+          },
+        },
         320: {
           slidesPerView: 'auto',
           slidesPerGroup: 1,
@@ -34,19 +49,6 @@ const initNewsSlider = () => {
             dynamicBullets: true,
             dynamicMainBullets: 4,
           }
-        },
-        768: {
-          slidesPerView: 2,
-          slidesPerGroup: 1,
-          spaceBetween: 30,
-          grid: {
-            rows: 2,
-          },
-        },
-        1440: {
-          slidesPerView: 'auto',
-          slidesPerGroup: 2,
-          spaceBetween: 32,
         },
       },
     });
