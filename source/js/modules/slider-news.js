@@ -1,5 +1,4 @@
 import Swiper from 'swiper/bundle';
-// import 'swiper/css';
 
 const initNewsSlider = () => {
 
@@ -24,7 +23,7 @@ const initNewsSlider = () => {
       },
       breakpoints: {
         320: {
-          slidesPerView: 2,
+          slidesPerView: 'auto',
           slidesPerGroup: 1,
           spaceBetween: 20,
           grid: {
