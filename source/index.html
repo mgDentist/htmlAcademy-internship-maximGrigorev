@@ -26,16 +26,17 @@
       <div class="container header__container">
         <img src="img/logo.svg" width="52" height="52" alt="Логотип компании Internship.">
         <button class="btn header__button" type="button" data-button="burger-btn">
-          <span>Меню</span>
-          <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="46" height="46" rx="23" fill="#316DC2" />
-            <path d="M14 19H32M14 23H32M14 27H32" stroke="white" stroke-linecap="round" />
-          </svg>
-          <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="46" height="46" rx="23" fill="white" />
-            <path d="M15 31L23 23M23 23L31 15M23 23L31 31M23 23L15 15" stroke="#316DC2" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
+          Меню
+          <span class="header__button-menu">
+            <svg width="22" height="22">
+              <use href="__spritemap#sprite-menu"></use>
+            </svg>
+          </span>
+          <span class="header__button-close">
+            <svg width="22" height="22">
+              <use href="__spritemap#sprite-cross"></use>
+            </svg>
+          </span>
         </button>
         <nav class="header__nav" data-element="header-nav">
           <ul class="header__nav-list nav-list" data-accordion="parent">
