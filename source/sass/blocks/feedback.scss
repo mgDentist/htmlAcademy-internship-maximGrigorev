@@ -117,6 +117,9 @@
 }
 
 .feedback__form-label {
+  font-size: 14px;
+  line-height: 18px;
+
   label {
     margin-bottom: 14px;
     display: flex;
@@ -138,7 +141,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
-    color: $color-alabaster;
+    color: $color-default-white;
     opacity: 0.8;
 
     @include vp-767 {
@@ -179,6 +182,8 @@
   input {
     min-height: 50px;
     padding: 5px 25px;
+    font-size: 14px;
+    line-height: 20px;
     color: $color-default-white;
     background-color: $color-transparent;
     border: 1px solid;
@@ -373,11 +378,24 @@
   }
 }
 
-.feedback__default-checkbox:focus + .feedback__custom-checkbox {
+.feedback__form-label--checkbox input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.feedback__form-label--checkbox input:focus+.feedback__custom-checkbox {
   border-color: $color-default-white;
 }
 
-.feedback__default-checkbox:checked + .feedback__custom-checkbox {
+.feedback__form-label--checkbox input:checked+.feedback__custom-checkbox {
   background-color: $color-default-white;
   border-color: $color-default-white;
 
@@ -391,12 +409,12 @@
   }
 }
 
-.feedback__default-checkbox:checked + .feedback__custom-checkbox svg {
+.feedback__form-label--checkbox input:checked+.feedback__custom-checkbox svg {
   display: block;
   color: $color-cerulean-blue;
 }
 
-.feedback__default-checkbox:disabled + .feedback__custom-checkbox {
+.feedback__form-label--checkbox input:disabled+.feedback__custom-checkbox {
   border-color: $color-default-white;
   background-color: rgb($color-transparent, 0.6);
   pointer-events: none;
@@ -404,7 +422,7 @@
   outline: none;
 }
 
-.feedback__default-checkbox:checked:disabled + .feedback__custom-checkbox {
+.feedback__form-label--checkbox input:checked:disabled+.feedback__custom-checkbox {
   background-color: $color-mischka;
   border-color: $color-mischka;
   pointer-events: none;

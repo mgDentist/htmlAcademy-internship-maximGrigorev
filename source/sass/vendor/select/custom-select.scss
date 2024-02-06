@@ -129,8 +129,8 @@
       background-color 0.3s ease;
 
     &[aria-selected="true"] {
-      color: #f0efe9;
-      background-color: #275699;
+      color: #ffffff;
+      background-color: #316DC2;
 
       @media (hover: hover) {
         &:hover:not(.focus-visible) {
@@ -147,8 +147,8 @@
 
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
-        background-color: #316DC2;
-        color: #ffffff;
+        background-color: #ffffff;
+        color: #316DC2;
       }
     }
 
@@ -240,7 +240,7 @@
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
-      line-height: 14px;
+      line-height: 20px;
       color: #F0EFE9;
       opacity: 1;
     }

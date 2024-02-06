@@ -158,7 +158,9 @@
   input {
     min-height: 50px;
     padding: 5px 25px;
-    color: $color-default-white;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-default-black;
     background-color: transparent;
     border: 1px solid;
     border-color: rgb($color-default-black, 0.3);
@@ -265,11 +267,24 @@
   }
 }
 
-.modal__default-checkbox:focus + .modal__custom-checkbox {
+.modal__form-label--checkbox input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.modal__form-label--checkbox input:focus+.modal__custom-checkbox {
   border-color: $color-default-black;
 }
 
-.modal__default-checkbox:checked + .modal__custom-checkbox {
+.modal__form-label--checkbox input:checked+.modal__custom-checkbox {
   background-color: $color-default-white;
   border-color: $color-cerulean-blue;
 
@@ -283,12 +298,12 @@
   }
 }
 
-.modal__default-checkbox:checked + .modal__custom-checkbox svg {
+.modal__form-label--checkbox input:checked+.modal__custom-checkbox svg {
   display: block;
   color: $color-cerulean-blue;
 }
 
-.modal__default-checkbox:disabled + .modal__custom-checkbox {
+.modal__form-label--checkbox input:disabled+.modal__custom-checkbox {
   border-color: $color-default-white;
   background-color: rgb($color-transparent, 0.6);
   pointer-events: none;
@@ -296,7 +311,7 @@
   outline: none;
 }
 
-.modal__default-checkbox:checked:disabled + .modal__custom-checkbox {
+.modal__form-label--checkbox input:checked:disabled+.modal__custom-checkbox {
   background-color: $color-mischka;
   border-color: $color-mischka;
   pointer-events: none;
@@ -375,7 +390,7 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 14px;
+    line-height: 20px;
     color: $color-default-black;
     opacity: 1;
   }
