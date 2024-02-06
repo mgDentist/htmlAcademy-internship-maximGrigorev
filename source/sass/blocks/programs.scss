@@ -397,3 +397,9 @@
 .programs__slider-button:disabled .programs__link-btn-svg-wrapper {
   background-color: $color-transparent;
 }
+
+.programs__slider-button.swiper-button-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  outline: none;
+}

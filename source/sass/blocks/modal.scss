@@ -265,11 +265,11 @@
   }
 }
 
-.modal__default-checkbox:focus+.modal__custom-checkbox {
+.modal__default-checkbox:focus + .modal__custom-checkbox {
   border-color: $color-default-black;
 }
 
-.modal__default-checkbox:checked+.modal__custom-checkbox {
+.modal__default-checkbox:checked + .modal__custom-checkbox {
   background-color: $color-default-white;
   border-color: $color-cerulean-blue;
 
@@ -283,12 +283,12 @@
   }
 }
 
-.modal__default-checkbox:checked+.modal__custom-checkbox svg {
+.modal__default-checkbox:checked + .modal__custom-checkbox svg {
   display: block;
   color: $color-cerulean-blue;
 }
 
-.modal__default-checkbox:disabled+.modal__custom-checkbox {
+.modal__default-checkbox:disabled + .modal__custom-checkbox {
   border-color: $color-default-white;
   background-color: rgb($color-transparent, 0.6);
   pointer-events: none;
@@ -296,7 +296,7 @@
   outline: none;
 }
 
-.modal__default-checkbox:checked:disabled+.modal__custom-checkbox {
+.modal__default-checkbox:checked:disabled + .modal__custom-checkbox {
   background-color: $color-mischka;
   border-color: $color-mischka;
   pointer-events: none;
