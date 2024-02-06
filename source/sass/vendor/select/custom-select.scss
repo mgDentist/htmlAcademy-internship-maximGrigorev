@@ -313,13 +313,14 @@
 
 .custom-select__button {
   &--modal {
-    height: 50px;
+    height: 46px;
     margin-top: 12px;
     background-color: transparent;
     border: 1px solid rgba(72, 72, 72, 0.30);
 
     @media (max-width: 768px) {
       height: 44px;
+      margin-top: 6px;
     }
   }
 }

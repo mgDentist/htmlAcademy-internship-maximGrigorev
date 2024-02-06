@@ -1,31 +1,45 @@
 .nav-list {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 22px;
 }
 
 .nav-list__item a {
+  font-weight: 400;
   line-height: 16px;
   letter-spacing: 0.32px;
   text-transform: uppercase;
   color: rgb($color-default-white, 0.7);
+  transition:
+    font-weight $trans-default,
+    color $trans-default;
 
   &:hover {
+    font-weight: 500;
     color: rgb($color-default-white, 0.9);
+  }
+
+  svg {
+    color: rgb($color-default-white, 0.6);
   }
 }
 
 .nav-list__item--sublisted a {
   display: flex;
+  align-items: center;
   gap: 10px;
 
   &:hover {
     color: rgb($color-default-white, 0.9);
   }
+
+  &:hover svg {
+    color: rgb($color-default-white, 0.9);
+  }
 }
 
 .nav-list__item--sublisted.is-active .nav-list__sublist {
-  margin-top: 20px;
+  margin-top: 16px;
 }
 
 .nav-list__item--sublisted svg {
@@ -34,26 +48,29 @@
 
 .nav-list__item--sublisted.is-active svg {
   transform: rotate(180deg);
-  transition: transform $trans-modal;
-}
-
-.nav-list__item--sublisted.is-active > a {
-  font-weight: 500;
   color: $color-default-white;
 }
 
-.nav-list__item--sublisted.is-active svg path {
-  opacity: 1;
+.nav-list__item--sublisted.is-active>a {
+  font-weight: 500;
+  color: $color-default-white;
 }
 
 .nav-list__sublist {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   padding-left: 16px;
 }
 
 .nav-list__sublist a {
   text-transform: capitalize;
   letter-spacing: normal;
+  color: rgba($color-default-white, 0.6);
+  transition: color $trans-default;
+
+  &:hover {
+    font-weight: 400;
+    color: rgba($color-default-white, 0.9);
+  }
 }
