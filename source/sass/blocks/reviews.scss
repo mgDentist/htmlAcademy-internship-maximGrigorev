@@ -115,6 +115,8 @@
   }
 
   img {
+    border-radius: 50%;
+
     @include vp-767 {
       width: 60px;
       height: 60px;
