@@ -58,7 +58,7 @@
     border-color: $color-cerulean-blue;
   }
 
-  .swiper-grid-column>.swiper-wrapper {
+  .swiper-grid-column > .swiper-wrapper {
     flex-wrap: wrap;
     flex-direction: column;
   }
@@ -507,7 +507,7 @@
   transition: background-color $trans-default;
 }
 
-.news__link-svg-wrapper>svg {
+.news__link-svg-wrapper > svg {
   color: $color-default-white;
 }
 
@@ -535,7 +535,7 @@
   transition: background-color $trans-default;
 }
 
-.news__link-btn-svg-wrapper>svg {
+.news__link-btn-svg-wrapper > svg {
   color: $color-cerulean-blue;
 }
 

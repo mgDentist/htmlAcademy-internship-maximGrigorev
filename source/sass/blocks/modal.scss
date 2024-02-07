@@ -261,9 +261,18 @@
     border-color: $color-default-black;
   }
 
-  svg {
-    display: none;
-    color: $color-default-white;
+  &::after {
+    position: absolute;
+    content: "";
+    left: 6px;
+    top: 1px;
+    width: 7px;
+    height: 12px;
+    border: solid $color-transparent;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    transition: background-color 0.3s ease;
+    z-index: 10;
   }
 }
 
@@ -280,30 +289,38 @@
   clip-path: inset(100%);
 }
 
-.modal__form-label--checkbox input:focus+.modal__custom-checkbox {
+.modal__form-label--checkbox input:focus + .modal__custom-checkbox {
   border-color: $color-default-black;
 }
 
-.modal__form-label--checkbox input:checked+.modal__custom-checkbox {
+.modal__form-label--checkbox input:checked:focus + .modal__custom-checkbox {
   background-color: $color-default-white;
   border-color: $color-cerulean-blue;
 
+  &::after {
+    border-color: $color-cerulean-blue;
+  }
+}
+
+.modal__form-label--checkbox input:checked + .modal__custom-checkbox {
+  border-color: $color-cerulean-blue;
+  background-color: $color-cerulean-blue;
+
+  &::after {
+    border-color: $color-default-white;
+  }
+
   &:hover,
   &:focus {
-    background-color: $color-cerulean-blue;
+    background-color: $color-default-white;
 
-    svg {
-      color: $color-default-white;
+    &::after {
+      border-color: $color-cerulean-blue;
     }
   }
 }
 
-.modal__form-label--checkbox input:checked+.modal__custom-checkbox svg {
-  display: block;
-  color: $color-cerulean-blue;
-}
-
-.modal__form-label--checkbox input:disabled+.modal__custom-checkbox {
+.modal__form-label--checkbox input:disabled + .modal__custom-checkbox {
   border-color: $color-default-white;
   background-color: rgb($color-transparent, 0.6);
   pointer-events: none;
@@ -311,15 +328,15 @@
   outline: none;
 }
 
-.modal__form-label--checkbox input:checked:disabled+.modal__custom-checkbox {
+.modal__form-label--checkbox input:checked:disabled + .modal__custom-checkbox {
   background-color: $color-mischka;
   border-color: $color-mischka;
   pointer-events: none;
   cursor: not-allowed;
   outline: none;
 
-  svg {
-    color: $color-default-white;
+  &::after {
+    border-color: rgba($color-default-white, 0.7);
   }
 }
 

@@ -234,7 +234,7 @@
   color: $color-default-white;
 }
 
-.about__item:nth-child(1) h4 {
+.about__item--first h4 {
   min-width: 144px;
   margin-right: 36px;
 
@@ -243,7 +243,7 @@
   }
 }
 
-.about__item:nth-child(2) {
+.about__item--second {
   h4 {
     min-width: 171px;
     margin-right: 26px;
@@ -254,7 +254,7 @@
   }
 }
 
-.about__item:nth-child(3) h4 {
+.about__item--third h4 {
   min-width: 134px;
   margin-right: 34px;
 
@@ -263,7 +263,7 @@
   }
 }
 
-.about__item:nth-child(4) h4 {
+.about__item--fourth h4 {
   min-width: 162px;
   margin-right: 54px;
 

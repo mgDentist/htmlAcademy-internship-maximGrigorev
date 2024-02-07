@@ -117,9 +117,6 @@
 }
 
 .feedback__form-label {
-  font-size: 14px;
-  line-height: 18px;
-
   label {
     margin-bottom: 14px;
     display: flex;
@@ -343,6 +340,11 @@
   label {
     margin-bottom: 0;
   }
+
+  textarea {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .feedback__custom-checkbox {
@@ -367,14 +369,23 @@
     top: 43%;
   }
 
+  &::after {
+    position: absolute;
+    content: "";
+    left: 6px;
+    top: 1px;
+    width: 7px;
+    height: 12px;
+    border: solid $color-transparent;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    transition: background-color 0.3s ease;
+    z-index: 10;
+  }
+
   &:hover,
   &:focus {
     border-color: $color-default-white;
-  }
-
-  svg {
-    display: none;
-    color: $color-default-white;
   }
 }
 
@@ -391,30 +402,40 @@
   clip-path: inset(100%);
 }
 
-.feedback__form-label--checkbox input:focus+.feedback__custom-checkbox {
+
+.feedback__form-label--checkbox input:focus + .feedback__custom-checkbox {
   border-color: $color-default-white;
 }
 
-.feedback__form-label--checkbox input:checked+.feedback__custom-checkbox {
+.feedback__form-label--checkbox input:checked:focus + .feedback__custom-checkbox {
+  border-color: $color-default-white;
+  background-color: $color-cerulean-blue;
+
+  &::after {
+    border-color: $color-default-white;
+  }
+}
+
+
+.feedback__form-label--checkbox input:checked + .feedback__custom-checkbox {
   background-color: $color-default-white;
   border-color: $color-default-white;
+
+  &::after {
+    border-color: $color-cerulean-blue;
+  }
 
   &:hover,
   &:focus {
     background-color: $color-cerulean-blue;
 
-    svg {
-      color: $color-default-white;
+    &::after {
+      border-color: $color-default-white;
     }
   }
 }
 
-.feedback__form-label--checkbox input:checked+.feedback__custom-checkbox svg {
-  display: block;
-  color: $color-cerulean-blue;
-}
-
-.feedback__form-label--checkbox input:disabled+.feedback__custom-checkbox {
+.feedback__form-label--checkbox input:disabled + .feedback__custom-checkbox {
   border-color: $color-default-white;
   background-color: rgb($color-transparent, 0.6);
   pointer-events: none;
@@ -422,15 +443,16 @@
   outline: none;
 }
 
-.feedback__form-label--checkbox input:checked:disabled+.feedback__custom-checkbox {
+.feedback__form-label--checkbox input:checked:disabled + .feedback__custom-checkbox {
   background-color: $color-mischka;
   border-color: $color-mischka;
   pointer-events: none;
   cursor: not-allowed;
   outline: none;
 
-  svg {
-    color: $color-default-white;
+
+  &::after {
+    border-color: rgba($color-default-white, 0.7);
   }
 }
 

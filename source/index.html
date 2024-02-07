@@ -284,14 +284,14 @@
           </div>
           <div class="about__scheme">
             <ul class="about__list">
-              <li class="about__item">
+              <li class="about__item about__item--first">
                 <div class="about__item-wrapper">
                   <h4>Более 250 программ</h4>
                   <p>учебных и рабочих, <br class="about__br-tablet">разной длительностью от 3 месяцев до 1 года</p>
                 </div>
 
               </li>
-              <li class="about__item">
+              <li class="about__item about__item--second">
                 <div class="about__item-wrapper about__item-wrapper--diff-padding">
                   <h4>Более<br class="about__br-mobile"> 3000 участников</h4>
                   <p>уже успешно прошли программу
@@ -299,14 +299,14 @@
                     странах</p>
                 </div>
               </li>
-              <li class="about__item">
+              <li class="about__item about__item--third">
                 <div class="about__item-wrapper">
                   <h4>от 4 200 $<br class="about__br-desktop">
                     до 8 400 $</h4>
                   <p>грант всем участникам для комфортного прохождения&nbsp;программы</p>
                 </div>
               </li>
-              <li class="about__item">
+              <li class="about__item about__item--fourth">
                 <div class="about__item-wrapper">
                   <h4>участники
                     из 60 стран</h4>
@@ -1147,7 +1147,7 @@
         <div class="container faq__container">
           <h2>Вопросы и ответы</h2>
           <ul class="faq__list" data-accordion="parent">
-            <li class="faq__item" data-accordion="element" tabindex="0">
+            <li class="faq__item faq__item--first" data-accordion="element" tabindex="0">
               <div data-accordion="button">
                 <div class="faq__title-container">
                   <h3>Кто организатор? Какие сроки у программы?</h3>
@@ -1169,7 +1169,7 @@
               </div>
             </li>
 
-            <li class="faq__item" data-accordion="element" tabindex="0">
+            <li class="faq__item faq__item--second" data-accordion="element" tabindex="0">
               <div data-accordion="button">
                 <div class="faq__title-container">
                   <h3>Что такое грант на обучение?</h3>
@@ -1216,7 +1216,7 @@
               </div>
             </li>
 
-            <li class="faq__item" data-accordion="element" tabindex="0">
+            <li class="faq__item faq__item--fourth" data-accordion="element" tabindex="0">
               <div data-accordion="button">
                 <div class="faq__title-container">
                   <h3>Признаётся ли учёба в рамках проекта для <br class="faq__br-mobile">дальнейшего обучения?</h3>
@@ -1240,7 +1240,7 @@
               </div>
             </li>
 
-            <li class="faq__item" data-accordion="element" tabindex="0">
+            <li class="faq__item faq__item--fifth" data-accordion="element" tabindex="0">
               <div data-accordion="button">
                 <div class="faq__title-container">
                   <h3>Как выглядит полный процесс регистрации на программу «Стажировка»?</h3>
@@ -1567,9 +1567,6 @@
                     <label>
                       <input type="checkbox" name="agree" id="agree">
                       <span class="feedback__custom-checkbox">
-                        <svg width="10" height="10">
-                          <use href="__spritemap#sprite-check"></use>
-                        </svg>
                       </span>
                       <span>
                         Я согласен на обработку моих персональных данных
@@ -1723,11 +1720,8 @@
             <div class="modal__form-label modal__form-label--checkbox" data-validate-type="checkbox"
               data-message-base="Ошибка">
               <label>
-                <input type="checkbox" name="agree">
+                <input type="checkbox" name="agree" checked>
                 <span class="modal__custom-checkbox">
-                  <svg width="10" height="10">
-                    <use href="__spritemap#sprite-check"></use>
-                  </svg>
                 </span>
                 <span>
                   Я согласен на обработку моих персональных данных
