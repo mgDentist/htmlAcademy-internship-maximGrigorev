@@ -7,7 +7,6 @@
     "dev": "vite --host --open",
     "test": "backstop test --config=pp.config.cjs",
     "build": "vite build",
-    "postbuild": "node replace-spritemap-path.cjs",
     "preview": "vite preview --open",
     "convert-rastr": "node convert-rastr.js",
     "w3c": "html-validator source --quiet",
